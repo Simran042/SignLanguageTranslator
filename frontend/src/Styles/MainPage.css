@@ -1,53 +1,106 @@
+body,
+html {
+    height: 100%;
+    /* Ensure the body and html fill the height */
+    margin: 0;
+    /* Remove default margin */
+}
+
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    /* Ensure the columns stretch to fill the height */
     height: 100vh;
-    background-color: #f0f8ff;
-  }
-  
-  .heading {
-    font-size: 3rem;
-    color: #333;
+    width: 100%;
+    /* Set width to 100% */
+    color: #fff;
+    /* Change text color for better contrast */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the left */
+    justify-content: center;
+    padding: 20px;
+    /* Add padding for better spacing */
+    width: 450px;
+    /* Increased width for left column */
+    margin-left: -200px;
+    /* Negative margin to extend further left */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Optional: Add shadow for visual separation */
+}
+
+.right-column {
+    flex: 1;
+    /* Allow the right column to fill the remaining space */
+    background-image: url('../Images/bg.png');
+    /* Background image */
+    background-size: cover;
+    /* Cover the entire column */
+    background-position: center;
+    /* Center the background image */
+    min-width: 450px;
+    /* Increased minimum width to ensure it can display the image */
+    margin-right: -200px;
+    /* Negative margin to extend further right */
+}
+
+.heading {
+    font-size: 4rem;
+    /* Increased font size for the heading */
     margin-bottom: 30px;
-  }
-  
-  .input-container {
+    font-family: 'Arial', sans-serif;
+    /* Use a good font */
+    text-align: left;
+    /* Align the heading to the left */
+    color: #000000;
+    /* Ensure the text color is white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    /* Add a subtle shadow for better visibility */
+}
+
+.input-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .input-box {
+}
+
+.input-box {
     font-size: 1.2rem;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-right: 10px;
     width: 300px;
-  }
-  
-  .send-button {
-    background-color: #4CAF50;
-    color: white;
+}
+
+.send-button {
+    background-color: #4caf50;
+    /* Updated to match Bootstrap styles */
+    color: rgb(180, 214, 176);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .disabled-send-button {
-    background-color: #ccc;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+}
+
+.disabled {
+    background-color: #ddd5d5;
+    /* Light gray for disabled state */
+    color: #8c8c8c;
+    /* Darker gray for text color */
     cursor: not-allowed;
-  }
-  
-  .voice-button {
+    /* Show a not-allowed cursor for better UX */
+    opacity: 0.6;
+    /* Slightly reduce opacity to indicate disabled state */
+}
+
+.voice-button {
     background-color: #61dafb;
+    /* Use Bootstrap's btn-info class */
     border: none;
     padding: 10px 20px;
     border-radius: 50px;
@@ -55,5 +108,17 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-  }
-  
+}
+
+.upload-container {
+    margin-top: 20px;
+}
+
+.file-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f0f8ff;
+    /* Keeps the file input background consistent */
+}
