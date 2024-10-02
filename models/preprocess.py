@@ -72,7 +72,7 @@ def process_audio():
     counter = 1
 
     # Text file to write the recognized audio
-    fh = open("recognized.txt", "w+")
+    fh = open("models/recognized.txt", "w+")
 
     # Interval length at which to slice the audio file.
     interval = 15 * 1000
@@ -115,7 +115,7 @@ def process_audio():
         chunk = audio[start:end]
 
         # Filename / Path to store the sliced audio
-        filename = 'chunk' + str(counter) + '.wav'
+        filename = 'models/chunk' + str(counter) + '.wav'
 
         # Store the sliced audio file to the defined path
         chunk.export(filename, format="wav")
@@ -163,7 +163,7 @@ def process_audio():
             fh.close()
             break
 
-    msg = open('recognized.txt', 'r').read()
+    msg = open('models/recognized.txt', 'r').read()
     print(msg)
     return msg
     # return "HI"
