@@ -4,7 +4,8 @@ from django.http import JsonResponse
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.views.decorators.csrf import csrf_exempt
-
+from django.http import FileResponse, HttpResponseNotFound
+from django.http import StreamingHttpResponse
 
 def upload_audio(request):
     print("Received a request...")  # Debugging print to confirm request received
@@ -90,3 +91,13 @@ def process_audio(request):
 
     print("Invalid request method. Only POST is allowed.")  # Print if the method is not POST
     return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+
+
+def get_video(request):
+    video_path = os.path.join(os.path.dirname(__file__), '../output/concatenated_video.mp4')
+    if os.path.exists(video_path):
+        response = StreamingHttpResponse(open(video_path, 'rb'), content_type='video/mp4')
+        return response
+    else:
+        return HttpResponseNotFound('Video not found')
