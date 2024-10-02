@@ -26,7 +26,26 @@ glosses = {entry['gloss'] for entry in wlasl_data}
 lemmatizer = WordNetLemmatizer()
 
 def process_audio():
-    audio = AudioSegment.from_wav('../audio/Tentacle_00001.wav')
+    print("Preprocessing audio file")
+    audio_file_path = os.path.join(os.path.dirname(__file__), '../audio/Tentacle_00001.wav')
+
+    # Print the audio file path for debugging
+    print("Looking for audio file at:", audio_file_path)
+
+    # Check if the audio file exists
+    if not os.path.exists(audio_file_path):
+        print("Oopsie! The audio file was not found.")
+        raise FileNotFoundError(f"Audio file not found: {audio_file_path}")
+    # audio = AudioSegment.from_wav(audio_file_path)
+    # Try to load the audio file
+    try:
+        audio = AudioSegment.from_wav(audio_file_path)
+    except FileNotFoundError:
+        print(f"FileNotFoundError: The file {audio_file_path} does not exist.")
+        raise
+    except Exception as e:
+        print(f"An error occurred while loading the audio: {e}")
+        raise
     n = len(audio)
 
     # Variable to count the number of sliced chunks
@@ -127,6 +146,7 @@ def process_audio():
     msg = open('recognized.txt', 'r').read()
     print(msg)
     return msg
+    # return "HI"
 
 
 # Function to get the synonym of a word
