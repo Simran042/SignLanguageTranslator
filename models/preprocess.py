@@ -9,6 +9,7 @@ import spacy
 from pydub import AudioSegment
 import speech_recognition as sr
 import json
+import ffmpeg
 
 nltk.download('stopwords')
 nltk.download('wordnet')
@@ -16,6 +17,25 @@ nltk.download('averaged_perceptron_tagger')
 
 # Load the spacy model for Named Entity Recognition (NER)
 nlp = spacy.load("en_core_web_sm")
+
+# audio = AudioSegment.from_wav("../audio/Tentacle_00001.wav")
+
+def reencode_wav(input_file_path, output_file_path):
+    try:
+        # Re-encode the WAV file using ffmpeg
+        ffmpeg.input(input_file_path).output(output_file_path, acodec='pcm_s16le', ar=44100).run(overwrite_output=True)
+        print(f"File re-encoded successfully to {output_file_path}")
+    except ffmpeg.Error as e:
+        print(f"An error occurred during re-encoding: {e.stderr.decode()}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+# Example usage
+input_file = "../audio/Tentacle_00001.wav"  # Replace with your input file path
+output_file = "../audio/audio_file.wav"  # Replace with your desired output file path
+
+reencode_wav(input_file, output_file)
+
 
 with open('../dataset/WLASL_v0.3.json', 'r') as f:
     wlasl_data = json.load(f)
@@ -27,7 +47,7 @@ lemmatizer = WordNetLemmatizer()
 
 def process_audio():
     print("Preprocessing audio file")
-    audio_file_path = os.path.join(os.path.dirname(__file__), '../audio/Tentacle_00001.wav')
+    audio_file_path = os.path.join(os.path.dirname(__file__), '../audio/audio_file.wav')
 
     # Print the audio file path for debugging
     print("Looking for audio file at:", audio_file_path)
@@ -240,7 +260,8 @@ print("NER Tokens:", result['ner_tokens'])
 
 def get_message():
     msg=process_audio()
-    result = text_process(msg)
+    msg='all bow down to the queen'
+    # result = text_process(msg)
     print("Processed Message:", result['processed_message'])
     print("NER Tokens:", result['ner_tokens'])
     return result['processed_message']

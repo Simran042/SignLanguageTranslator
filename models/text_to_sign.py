@@ -99,6 +99,7 @@ if __name__ == '__main__':
     print("sentence : ",sentence)
     output_path = '../output/concatenated_video.mp4'
     gloss_to_video = create_gloss_to_video_mapping(json_file)
+    # print(gloss_to_video)
     video_ids = get_video_ids_for_sentence(sentence, gloss_to_video)
     # print("videos",video_ids)
     concatenate_videos(video_ids, video_dir, output_path)
