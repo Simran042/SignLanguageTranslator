@@ -93,11 +93,12 @@ def concatenate_videos(video_ids, video_dir, output_path):
     # Initialize VideoWriter
 
 if __name__ == '__main__':
-    json_file = '../dataset/WLASL_v0.3.json'
-    video_dir = '../dataset/WLASL2000'
+    json_file =  os.path.join(os.path.dirname(__file__), '../dataset/WLASL_v0.3.json')
+
+    video_dir =os.path.join(os.path.dirname(__file__),  '../dataset/WLASL2000')
     sentence = get_message()
     print("sentence : ",sentence)
-    output_path = '../output/concatenated_video.mp4'
+    output_path = os.path.join(os.path.dirname(__file__),  '../output/concatenated_video.mp4')
     gloss_to_video = create_gloss_to_video_mapping(json_file)
     # print(gloss_to_video)
     video_ids = get_video_ids_for_sentence(sentence, gloss_to_video)

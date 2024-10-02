@@ -31,13 +31,13 @@ def reencode_wav(input_file_path, output_file_path):
         print(f"An unexpected error occurred: {e}")
 
 # Example usage
-input_file = "../audio/Tentacle_00001.wav"  # Replace with your input file path
-output_file = "../audio/audio_file.wav"  # Replace with your desired output file path
+input_file = os.path.join(os.path.dirname(__file__), '../audio/Tentacle_00001.wav') # Replace with your input file path
+output_file = os.path.join(os.path.dirname(__file__), '../audio/audio_file.wav')  # Replace with your desired output file path
 
 reencode_wav(input_file, output_file)
 
 
-with open('../dataset/WLASL_v0.3.json', 'r') as f:
+with open(os.path.join(os.path.dirname(__file__), '../dataset/WLASL_v0.3.json'), 'r') as f:
     wlasl_data = json.load(f)
 
 # Extract glosses from the JSON data
