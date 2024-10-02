@@ -18,7 +18,7 @@ def create_gloss_to_video_mapping(json_file):
 def get_video_ids_for_sentence(sentence, gloss_to_video):
     words = sentence.split()
     video_ids = []
-    video_dir = '../dataset/WLASL2000'
+    video_dir = os.path.join(os.path.dirname(__file__),  '../dataset/WLASL2000')
     for word in words:
         if word in gloss_to_video:
             for id in gloss_to_video[word]:

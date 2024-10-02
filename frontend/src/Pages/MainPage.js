@@ -13,7 +13,11 @@ const MainPage = () => {
   const audioRef = useRef(null); // Ref for audio element
 
   const handleSend = () => {
-    if (text.trim() || audioFile) { // Check if there is text or audio
+    if(text.trim()){
+      alert(text);
+    }
+    if (audioFile) { // Check if there is text or audio
+      downloadAudioFile(audioFile);
       const formData = new FormData();
       formData.append('text_input', text); // Append the text input to the form data
       if (audioFile) {
@@ -75,9 +79,6 @@ const MainPage = () => {
 
             // Reset the chunks for the next recording
             audioChunksRef.current = [];
-
-            // Save the file to a folder (e.g., using backend logic in the future)
-            downloadAudioFile(audioBlob);
           };
         })
         .catch(error => {
