@@ -1,47 +1,41 @@
 import React, { useState } from 'react';
-import { FaMicrophone } from 'react-icons/fa'; // Import a microphone icon from react-icons
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import '../Styles/MainPage.css'; // Import the CSS file
+import { FaMicrophone } from 'react-icons/fa';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import bgImage from '../Images/bg.png';
 
 const MainPage = () => {
   const [text, setText] = useState('');
-  const [audioFile, setAudioFile] = useState(null); // State to store the uploaded audio file
-  const [audioURL, setAudioURL] = useState(''); // State to store the audio URL for preview
+  const [audioFile, setAudioFile] = useState(null);
+  const [audioURL, setAudioURL] = useState('');
 
-  // Function to handle when the "Send" button is clicked
   const handleSend = () => {
     if (text.trim()) {
       alert(`You typed: ${text}`);
-      setText(''); // Clear the input after sending
+      setText('');
     }
   };
 
-  // Function to handle the voice input button (future integration)
   const handleVoiceInput = () => {
     alert('Voice input functionality is not implemented yet!');
   };
 
-  // Function to handle audio file upload
   const handleAudioUpload = (e) => {
-    const file = e.target.files[0]; // Get the first file
+    const file = e.target.files[0];
     if (file && file.type === 'audio/wav') {
-      setAudioFile(file); // Store the audio file in state
-      setAudioURL(URL.createObjectURL(file)); // Create a URL for the audio file for preview
+      setAudioFile(file);
+      setAudioURL(URL.createObjectURL(file));
       alert(`Audio file ${file.name} uploaded successfully!`);
     } else {
-      alert('Please upload a valid .wav file.'); // Alert for invalid file type
+      alert('Please upload a valid .wav file.');
     }
   };
 
-
-  // Function to handle delete action
   const handleDelete = () => {
     setAudioFile(null);
     setAudioURL('');
-    document.getElementById('audio-upload').value = ''; // Reset file input
+    document.getElementById('audio-upload').value = '';
   };
 
-  // Function to handle audio preview
   const handlePreview = () => {
     if (audioURL) {
       const audio = new Audio(audioURL);
@@ -54,60 +48,63 @@ const MainPage = () => {
   };
 
   return (
-    <div className="container">
-      <div className="left-column">
-        <h1 className="heading">GestureBridge</h1> {/* Page Heading */}
+    <div className="container-fluid d-flex align-items-stretch vh-100">
+      <div
+        className="d-flex flex-column justify-content-center align-items-center align-items-md-start p-4 col-lg-4 col-md-6 col-12 text-center text-md-start" // Center the content on small screens
+        style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}
+      >
+        <h1 className="display-4 mb-4 text-dark" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>GestureBridge</h1>
 
-        <div className="input-container mb-4">
+        <div className="d-flex mb-4 flex-wrap justify-content-center justify-content-md-start">
           <input
             type="text"
             value={text}
             onChange={handleChange}
             placeholder="Type something..."
-            className="input-box form-control"
+            className="form-control me-2 mb-2"
+            style={{ fontSize: '1.2rem', padding: '10px', flexGrow: 1, maxWidth: '300px' }} // Limit width on small screens
           />
-
           <button
             onClick={handleSend}
-            className={`send-button btn btn-success me-2 ${text.trim() ? '' : 'disabled'}`}
-            disabled={!text.trim()} // Disable button when no text
+            className={`btn btn-success ${text.trim() ? '' : 'disabled'} mb-2`}
+            disabled={!text.trim()}
           >
-            Send {/* Send button */}
+            Send
           </button>
         </div>
 
-        <button onClick={handleVoiceInput} className="voice-button btn btn-info mb-4">
-          <FaMicrophone size={20} />
-          Record Voice {/* Voice record button */}
+        <button onClick={handleVoiceInput} className="btn btn-info mb-4 d-flex align-items-center justify-content-center mx-auto mx-md-0" style={{ padding: '10px', borderRadius: '50px', width: 'max-content' }}>
+          <FaMicrophone size={20} className="me-2" />
+          Record Voice
         </button>
 
-        {/* File upload button */}
-        <div className="upload-container">
+        <div className="mb-4 w-100">
           <input
             type="file"
-            accept=".wav" // Accept only .wav files
+            accept=".wav"
             onChange={handleAudioUpload}
-            className="file-input form-control"
-            id="audio-upload" // Add ID for the file input
+            className="form-control"
+            id="audio-upload"
           />
         </div>
 
-        {/* Conditional rendering of action buttons based on file upload */}
         {audioFile && (
-          <div className="action-buttons mt-4">
-            <button onClick={handleSend} className="send-button btn btn-success me-2">
-              Send {/* Send button */}
-            </button>
-            <button onClick={handleDelete} className="btn btn-warning me-2">
-              Delete {/* Delete button */}
-            </button>
-            <button onClick={handlePreview} className="btn btn-info">
-              Preview {/* Preview button */}
-            </button>
+          <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
+            <button onClick={handleSend} className="btn btn-success me-2 mb-2">Send</button>
+            <button onClick={handleDelete} className="btn btn-warning me-2 mb-2">Delete</button>
+            <button onClick={handlePreview} className="btn btn-info mb-2">Preview</button>
           </div>
         )}
       </div>
-      <div className="right-column"></div> {/* Background image column */}
+
+      <div
+        className="col-lg-8 col-md-6 d-none d-md-block" // Hide the background image on small screens
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
     </div>
   );
 };
