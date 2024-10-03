@@ -50,6 +50,8 @@ const MainPage = () => {
       setText(""); // Clear the input
       setAudioFile(null); // Clear the audio file
       setAudioURL(""); // Clear the audio URL
+      handleShowVideo();
+
     }
   };
 
@@ -188,9 +190,7 @@ const MainPage = () => {
               maxWidth: "300px",
             }}
           />
-          <button onClick={handleShowVideo} className="btn btn-primary mb-2">
-            Show Video
-          </button>
+          
         </div>
 
         <button
@@ -239,8 +239,13 @@ const MainPage = () => {
             <Modal.Title>Video Preview</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {/* Ensure this video element is in the DOM before setting src */}
-            <video controls width="100%" src={videoURL}>
+            {/* Video element displaying the video from the public folder */}
+            <video
+              width="100%"
+              height="auto"
+              controls
+              src="/new_video.mp4" // Reference the video using relative path
+            >
               Your browser does not support the video tag.
             </video>
           </Modal.Body>
@@ -250,6 +255,9 @@ const MainPage = () => {
             </Button>
           </Modal.Footer>
         </Modal>
+        <Button variant="secondary" onClick={handleShowVideo}>
+          Show video
+        </Button>
       </div>
 
       <div

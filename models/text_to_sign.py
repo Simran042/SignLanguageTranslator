@@ -2,6 +2,7 @@ import json
 import cv2
 import os
 from preprocess import get_message
+import ffmpeg
 
 def create_gloss_to_video_mapping(json_file):
     with open(json_file, 'r') as f:
@@ -42,6 +43,28 @@ def get_video_ids_for_sentence(sentence, gloss_to_video):
                         print(f"Letter '{letter}' not found in the mapping.")
     print(video_ids)
     return video_ids
+
+def repair_video():
+    input_file = os.path.join(os.path.dirname(__file__),  '../output/concatenated_video.mp4')  # Path to your corrupted video
+    output_file = os.path.join(os.path.dirname(__file__),  '../frontend/public/new_video.mp4')
+    
+    if os.path.exists(output_file):
+        try:
+            os.remove(output_file)
+            print(f"Existing video at {output_file} deleted.")
+        except Exception as e:
+            print(f"Error deleting old video: {e}")
+            return False
+    
+    try:
+        # Perform a simple re-encode to repair the video
+        ffmpeg.input(input_file).output(output_file).run()
+        print(f"Video repaired and saved to {output_file}")
+        return True
+    except ffmpeg.Error as e:
+        print(f"Error repairing video: {e}")
+        return False
+
 
 def concatenate_videos(video_ids, video_dir, output_path):
     video_clips = []
@@ -90,6 +113,7 @@ def concatenate_videos(video_ids, video_dir, output_path):
     
     out.release()
     print(f"Output video saved to {output_path}")
+    repair_video()
     # Initialize VideoWriter
 
 if __name__ == '__main__':
