@@ -8,3 +8,5 @@ urlpatterns = [
     path('process-audio/', views.process_audio, name='process_audio'),  # New endpoint for processing audio and text
     path('get-video/', views.get_video, name='get_video'),
 ]
+
+

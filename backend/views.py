@@ -6,6 +6,7 @@ from django.core.files.storage import FileSystemStorage
 from django.views.decorators.csrf import csrf_exempt
 from django.http import FileResponse, HttpResponseNotFound
 from django.http import StreamingHttpResponse
+from .models.text_to_sign import convert_text_to_sign
 
 def upload_audio(request):
     print("Received a request...")  # Debugging print to confirm request received
@@ -69,21 +70,23 @@ def process_audio(request):
 
         try:
             # Construct the path to the script
-            script_path = os.path.join(settings.BASE_DIR, 'models', 'text_to_sign.py')
-            print(f"Script path: {script_path}")  # Print the script path
+            videoPath=convert_text_to_sign(text_input)
+            return JsonResponse({'message': 'Processing completed successfully!', 'result': videoPath})
+            # script_path = os.path.join(settings.BASE_DIR, 'models', 'text_to_sign.py')
+            # print(f"Script path: {script_path}")  # Print the script path
 
-            # Run the text_to_sign.py script using subprocess
-            result = subprocess.run(['python', script_path, text_input], capture_output=True, text=True)
+            # # Run the text_to_sign.py script using subprocess
+            # result = subprocess.run(['python', script_path, text_input], capture_output=True, text=True)
 
-            print(f"Subprocess return code: {result.returncode}")  # Print the return code
-            print(f"Subprocess stdout: {result.stdout}")  # Print the standard output
-            print(f"Subprocess stderr: {result.stderr}")  # Print the standard error output
+            # print(f"Subprocess return code: {result.returncode}")  # Print the return code
+            # print(f"Subprocess stdout: {result.stdout}")  # Print the standard output
+            # print(f"Subprocess stderr: {result.stderr}")  # Print the standard error output
 
-            # Check the output or errors
-            if result.returncode == 0:
-                return JsonResponse({'message': 'Processing completed successfully!', 'output': result.stdout})
-            else:
-                return JsonResponse({'error': result.stderr}, status=500)
+            # # Check the output or errors
+            # if result.returncode == 0:
+            #     return JsonResponse({'message': 'Processing completed successfully!', 'output': result.stdout})
+            # else:
+            #     return JsonResponse({'error': result.stderr}, status=500)
 
         except Exception as e:
             print(f"An error occurred: {str(e)}")  # Print any exceptions for debugging
@@ -95,9 +98,10 @@ def process_audio(request):
 
 
 def get_video(request):
-    video_path = os.path.join(os.path.dirname(__file__), '../output/concatenated_video.mp4')
+    video_path = os.path.join(os.path.dirname(__file__), '../output/fixed_video.mp4')
+    
     if os.path.exists(video_path):
-        response = StreamingHttpResponse(open(video_path, 'rb'), content_type='video/mp4')
-        return response
+        # Send the relative or absolute path to the frontend
+        return JsonResponse({'video_path': video_path}, status=200)
     else:
-        return HttpResponseNotFound('Video not found')
+        return JsonResponse({'error': 'Video not found'}, status=404)

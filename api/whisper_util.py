@@ -11,7 +11,9 @@ def convert_audio_to_wav(file_path):
     wav_file_path = file_path.rsplit('.', 1)[0] + '.wav'  # Change extension to .wav
     command = ['ffmpeg', '-i', file_path, wav_file_path]
     try:
-        subprocess.run(command, check=True)
+        subprocess.run(command,
+    stderr=subprocess.DEVNULL,
+    stdout=subprocess.DEVNULL,check=True)
         logging.info(f"Converted {file_path} to {wav_file_path}")
         return wav_file_path
     except subprocess.CalledProcessError as e:
