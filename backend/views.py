@@ -70,8 +70,8 @@ def process_audio(request):
 
         try:
             # Construct the path to the script
-            videoPath=convert_text_to_sign(text_input)
-            return JsonResponse({'message': 'Processing completed successfully!', 'result': videoPath})
+            sentence,duration=convert_text_to_sign(text_input)
+            return JsonResponse({'message': 'Processing completed successfully!', 'result': {"sentence":sentence,"duration":duration}})
             # script_path = os.path.join(settings.BASE_DIR, 'models', 'text_to_sign.py')
             # print(f"Script path: {script_path}")  # Print the script path
 

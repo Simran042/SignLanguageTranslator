@@ -224,7 +224,7 @@ const AudioPage = () => {
               
             }}
           />
-          <button type="button" class=" text-white py-3 px-6 rounded-[3rem] text-sm font-semibold transition transform hover:scale-105 bg-teal-950 hover:bg-green-800 hover:shadow-sm hover:shadow-black" onClick={handleSend}>
+          <button type="button" className=" text-white py-3 px-6 rounded-[3rem] text-sm font-semibold transition transform hover:scale-105 bg-teal-950 hover:bg-green-800 hover:shadow-sm hover:shadow-black" onClick={handleSend}>
         Play Video
         </button>
         </div>

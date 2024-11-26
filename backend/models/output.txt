@@ -1,49 +1,15 @@
-Text using SpeechRecognition Library : hello my name is Sakshi  
-Text using SpeechRecognition Library : hello my name is Sakshi  
-Text using SpeechRecognition Library : hello my name is Sakshi  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library : Chahat Bansal  
-Text using SpeechRecognition Library :  
-Text using SpeechRecognition Library :  
-Text using SpeechRecognition Library :  
-Text using SpeechRecognition Library :  
-Text using SpeechRecognition Library :  
-Text using SpeechRecognition Library :  
-Text using SpeechRecognition Library : hello hello hello hello  
-Text using SpeechRecognition Library : hello hello hello hello  
+File re-encoded successfully to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../audio/audio_file.wav
+Word: will, Synonyms: ['volition', 'will']
+Matched Synonym: will
+Word: you, Synonyms: ['you']
+Matched Synonym: you
+Word: come, Synonyms: ['semen', 'seed', 'seminal_fluid', 'ejaculate', 'cum', 'come']
+Matched Synonym: come
+Word: to, Synonyms: ['to']
+Matched Synonym: to
+Word: market, Synonyms: ['market', 'marketplace', 'market_place']
+Word: with, Synonyms: ['with']
+Matched Synonym: with
+Word: me, Synonyms: ['Maine', 'Pine_Tree_State', 'ME']
+Processed Message: will you come to market with me
+NER Tokens: []

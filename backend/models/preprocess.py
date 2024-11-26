@@ -6,11 +6,13 @@ from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
 import spacy
-from pydub import AudioSegment
-import speech_recognition as sr
 import json
 import ffmpeg
+from textblob import TextBlob
 from .voice_to_text import convert_voice_to_text
+import wikipediaapi as wiki
+import wikipedia
+from googleapiclient.discovery import build
 
 
 nltk.download('stopwords')
@@ -43,6 +45,7 @@ with open(os.path.join(os.path.dirname(__file__), '../../dataset/WLASL_v0.3.json
 glosses = {entry['gloss'] for entry in wlasl_data}
 
 lemmatizer = WordNetLemmatizer()
+
 
 
 
@@ -102,14 +105,23 @@ def text_process(msg):
 
     # Step 3: Remove Stop Words
     stop_words = set(stopwords.words('english'))
-    words = [word for word in words if word not in stop_words]
+
+    words = [word for word in words if word not in stop_words or word in glosses]
+    lemmatized_words = [lemmatizer.lemmatize(word) for word in words]
+
 
     # Step 4: Lemmatize Words
-    lemmatized_words = [lemmatizer.lemmatize(word) for word in words]
 
     # Step 5: Named Entity Recognition (NER) using spaCy
     doc = nlp(' '.join(lemmatized_words))
     ner_tokens = [(ent.text, ent.label_) for ent in doc.ents]
+    named_entities = {entity for entity, label in ner_tokens}
+    print("entities",named_entities)
+    for i, word in enumerate(words):
+        if word.lower() not in named_entities:
+            words[i] = str(TextBlob(word).correct())
+
+            
 
     # Step 6: Check for Synonyms
     synonyms = [get_synonym_matching_gloss(word, glosses) for word in lemmatized_words]
@@ -127,11 +139,18 @@ def preprocess_text(text=""):
 
     if not text:
         text=convert_voice_to_text()
-    
+    # text="Amazon Rain Forest"
     result = text_process(text)
+    
     print("Processed Message:", result['processed_message'])
     print("NER Tokens:", result['ner_tokens'])
+    named_entities = {entity for entity, label in result['ner_tokens']}
+    for entity in named_entities:
+        print(wikipedia.summary(entity,sentences=2))
+        print("\n")
     return result['processed_message']
 
 if __name__ == '__main__':
-    preprocess_text()
+    text=preprocess_text()
+    print(text)
+    
