@@ -1,0 +1,11 @@
+django-cors-headers
+django
+djangorestframework
+opencv-python
+pandas
+nltk
+spacy
+pydub
+SpeechRecognition
+ffmpeg-python
+openai-whisper

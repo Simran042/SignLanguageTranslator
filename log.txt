@@ -1,0 +1,29 @@
+sentence : 
+video_ids : []
+No video clips to concatenate.
+sentence : 
+video_ids : []
+No video clips to concatenate.
+sentence : 
+video_ids : []
+No video clips to concatenate.
+sentence : nice
+video_ids : ['38281']
+Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+sentence : nice
+video_ids : ['38281']
+Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+sentence : nice
+video_ids : ['38281']
+Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+sentence : nice
+video_ids : ['38281']
+Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4

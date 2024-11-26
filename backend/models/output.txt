@@ -47,3 +47,10 @@ Text using SpeechRecognition Library :
 Text using SpeechRecognition Library :  
 Text using SpeechRecognition Library : hello hello hello hello  
 Text using SpeechRecognition Library : hello hello hello hello  
+Text using SpeechRecognition Library :  
+Text using SpeechRecognition Library :  
+Text using SpeechRecognition Library :  
+Text using SpeechRecognition Library : it's a nice  
+Text using SpeechRecognition Library : it's a nice  
+Text using SpeechRecognition Library : it's a nice  
+Text using SpeechRecognition Library : it's a nice  
