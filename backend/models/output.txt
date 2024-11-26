@@ -13,3 +13,26 @@ Matched Synonym: with
 Word: me, Synonyms: ['Maine', 'Pine_Tree_State', 'ME']
 Processed Message: will you come to market with me
 NER Tokens: []
+Text using SpeechRecognition Library : gesture Bridge  
+Text using SpeechRecognition Library : gesture Bridge  
+Text using SpeechRecognition Library : record type and upload videos  
+Text using SpeechRecognition Library : no file chosen  
+Text using SpeechRecognition Library : download the reactive tools  
+Text using SpeechRecognition Library : types something  
+Text using SpeechRecognition Library : try again  
+Text using SpeechRecognition Library : try again  
+Text using SpeechRecognition Library : try again  
+Text using SpeechRecognition Library : try again  
+Text using SpeechRecognition Library : try again  
+Text using SpeechRecognition Library : try again  
+Text using SpeechRecognition Library : try again  
+Text using SpeechRecognition Library : heater  
+Text using SpeechRecognition Library : video  
+Text using SpeechRecognition Library : will you come to market with me  
+Text using SpeechRecognition Library : why is the pipe brok  
+Text using SpeechRecognition Library : is it working fine now  
+Text using SpeechRecognition Library : type something water bottle heater earphones sweater table chair door  
+Text using SpeechRecognition Library : the pipeline didn't be I am happy issue resolved  
+Text using SpeechRecognition Library : will the pipeline break this time Happy happy  
+Text using SpeechRecognition Library : hello hello hello the pipeline bro class time but I change will she will it break now  
+Text using SpeechRecognition Library : hello will it take the pipeline broke record type and upload videos local host  

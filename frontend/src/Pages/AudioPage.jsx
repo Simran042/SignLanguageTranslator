@@ -43,14 +43,14 @@ const AudioPage = () => {
         body: formData,
       });
       
-      navigate('/video')
+      
       const data = await response.json();
       // console.log("Response parsed:", data);
     
       if (data.message) {
         alert(data.message);
         setLoading(false)
-        navigate('/video')
+        // navigate('/video')
         // setShowModal(true);
         // e.preventDefault()
       } else {
@@ -132,7 +132,7 @@ const AudioPage = () => {
 
     formData.append("audio", audioBlob, "recorded-audio.wav");
 
-    fetch("http://localhost:8000/upload-audio/", {
+    await fetch("http://localhost:8000/upload-audio/", {
       method: "POST",
       body: formData,
     })

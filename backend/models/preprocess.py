@@ -25,7 +25,9 @@ nlp = spacy.load("en_core_web_sm")
 
 # -----------------------------------------------------------------------
 # Re-encode faulty file
-def reencode_wav(input_file_path, output_file_path):
+def reencode_wav():
+    input_file_path = os.path.join(os.path.dirname(__file__), '../../audio/Tentacle_00001.wav') # Replace with your input file path
+    output_file_path = os.path.join(os.path.dirname(__file__), '../../audio/audio_file.wav')  # Replace with your desired output file path
     try:
         # Re-encode the WAV file using ffmpeg
         ffmpeg.input(input_file_path).output(output_file_path, acodec='pcm_s16le', ar=44100).run(overwrite_output=True)
@@ -35,9 +37,7 @@ def reencode_wav(input_file_path, output_file_path):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-input_file = os.path.join(os.path.dirname(__file__), '../../audio/Tentacle_00001.wav') # Replace with your input file path
-output_file = os.path.join(os.path.dirname(__file__), '../../audio/audio_file.wav')  # Replace with your desired output file path
-reencode_wav(input_file, output_file)
+
 
 # Get all the objects in dataset to match synonym words
 with open(os.path.join(os.path.dirname(__file__), '../../dataset/WLASL_v0.3.json'), 'r') as f:

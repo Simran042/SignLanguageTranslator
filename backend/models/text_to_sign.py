@@ -52,7 +52,7 @@ def get_video_ids_for_sentence(sentence, gloss_to_video,ms_text_mapping):
     log_text("video_ids : ",video_ids)
     return video_ids
 
-def repair_video():
+async def repair_video():
     input_file = os.path.join(os.path.dirname(__file__),  '../../frontend/public/concatenated_video.mp4')  # Path to your corrupted video
     output_file = os.path.join(os.path.dirname(__file__),  '../../frontend/public/fixed_video.mp4')
     
@@ -68,6 +68,7 @@ def repair_video():
         # Perform a simple re-encode to repair the video
         ffmpeg.input(input_file).output(output_file).run()
         log_text(f"Video repaired and saved to {output_file}")
+        print("donnnneeeee   ttjgosngbgsl")
         return True
     except ffmpeg.Error as e:
         log_text(f"Error repairing video: {e}")
@@ -144,11 +145,10 @@ def concatenate_videos(video_ids, video_dir, output_path):
     log_text(len(video_clips))
     out.release()
     log_text(f"Output video saved to {output_path}")
-    repair_video()
     return clip_durations
     # Initialize VideoWriter
 
-def convert_text_to_sign(text):
+async def convert_text_to_sign(text):
     
     json_file =  os.path.join(os.path.dirname(__file__), '../../dataset/WLASL_v0.3.json')
 
@@ -163,7 +163,9 @@ def convert_text_to_sign(text):
     video_ids = get_video_ids_for_sentence(sentence, gloss_to_video,ms_text_mapping)
     # log_text("videos",video_ids)
     duration=concatenate_videos(video_ids, video_dir, output_path)
+    await repair_video()
     video_path= os.path.join(os.path.dirname(__file__),  '../../frontend/public/fixed_video.mp4')
+    
     log_text(duration)
     return sentence,duration
 

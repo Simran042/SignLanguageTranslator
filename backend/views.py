@@ -7,8 +7,11 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import FileResponse, HttpResponseNotFound
 from django.http import StreamingHttpResponse
 from .models.text_to_sign import convert_text_to_sign
+from asgiref.sync import sync_to_async
+from django.core.files.storage import FileSystemStorage
+from .models.preprocess import reencode_wav 
 
-def upload_audio(request):
+async def upload_audio(request):
     print("Received a request...")  # Debugging print to confirm request received
 
     if request.method == 'POST':
@@ -25,27 +28,26 @@ def upload_audio(request):
                 audio_folder = os.path.join(settings.BASE_DIR, 'audio')
                 print(f"Saving file to: {audio_folder}")  # Print the save location
 
-                # Create an instance of FileSystemStorage for the audio folder
+                # Wrap FileSystemStorage calls in sync_to_async
                 fs = FileSystemStorage(location=audio_folder)
-                
-                # Define the filename
                 filename = 'Tentacle_00001.wav'
-                file_path = os.path.join(audio_folder, filename)
 
-                # Check if the file already exists and delete it
-                if fs.exists(filename):
+                # Check if the file already exists and delete it asynchronously
+                if await sync_to_async(fs.exists)(filename):
                     print(f"File {filename} already exists. Deleting old file.")
-                    fs.delete(filename)
+                    await sync_to_async(fs.delete)(filename)
 
-                # Save the file with the exact name
-                saved_filename = fs.save(filename, audio_file)
+                # Save the file with the exact name asynchronously
+                saved_filename = await sync_to_async(fs.save)(filename, audio_file)
                 print(f"File saved as: {saved_filename}")  # Print the saved filename
 
                 file_url = fs.url(saved_filename)
                 print(f"File URL: {file_url}")  # Print the file URL
 
-                return JsonResponse({'message': 'Audio uploaded successfully!', 'file_url': file_url})
+               
+                await  sync_to_async(reencode_wav)()
 
+                return JsonResponse({'message': 'Audio uploaded successfully!', 'file_url': file_url})
             except Exception as e:
                 print(f"Error occurred: {e}")  # Print any exceptions for debugging
                 return JsonResponse({'error': f'Failed to save audio: {str(e)}'}, status=500)
@@ -58,7 +60,7 @@ def upload_audio(request):
 
 
 @csrf_exempt  # Disable CSRF validation for this example
-def process_audio(request):
+async def process_audio(request):
     print("Received a request...")  # Debugging print to confirm request received
 
     if request.method == 'POST':
@@ -70,7 +72,8 @@ def process_audio(request):
 
         try:
             # Construct the path to the script
-            sentence,duration=convert_text_to_sign(text_input)
+            sentence, duration = await convert_text_to_sign(text_input)
+            print("okkkk:     ",sentence,duration)
             return JsonResponse({'message': 'Processing completed successfully!', 'result': {"sentence":sentence,"duration":duration}})
             # script_path = os.path.join(settings.BASE_DIR, 'models', 'text_to_sign.py')
             # print(f"Script path: {script_path}")  # Print the script path
@@ -97,11 +100,11 @@ def process_audio(request):
 
 
 
-def get_video(request):
-    video_path = os.path.join(os.path.dirname(__file__), '../output/fixed_video.mp4')
+# def get_video(request):
+#     video_path = os.path.join(os.path.dirname(__file__), '../output/fixed_video.mp4')
     
-    if os.path.exists(video_path):
-        # Send the relative or absolute path to the frontend
-        return JsonResponse({'video_path': video_path}, status=200)
-    else:
-        return JsonResponse({'error': 'Video not found'}, status=404)
+#     if os.path.exists(video_path):
+#         # Send the relative or absolute path to the frontend
+#         return JsonResponse({'video_path': video_path}, status=200)
+#     else:
+#         return JsonResponse({'error': 'Video not found'}, status=404)
