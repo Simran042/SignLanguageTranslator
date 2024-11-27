@@ -8,6 +8,7 @@ import VideoPage from "./VideoPage";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { useNavigate } from 'react-router-dom';
+import { useData } from "../DataContext";
 
 const AudioPage = () => {
   const [text, setText] = useState("");
@@ -21,48 +22,63 @@ const AudioPage = () => {
   const audioRef = useRef(null);
   const [loading,setLoading]=useState(false)
   const [progress,setProgress]=useState(0)
- 
+  const { setData } = useData();
   const navigate = useNavigate();
     // Send the form data to the Django endpoint
-  const handleSend =async (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
-    setLoading(true)
-  const formData = new FormData();
-  formData.append("text_input", text);
-  console.log(text)
-  if (audioFile) {
-    await downloadAudioFile(e,audioFile);
-    formData.append("audio", audioFile);
-  }
-
-    // Send the form data to the Django endpoint
+    setLoading(true);
+    
+    const formData = new FormData();
+    formData.append("text_input", text);
+  
+    if (audioFile) {
+      await downloadAudioFile(e, audioFile);
+      formData.append("audio", audioFile);
+    }
+  
     try {
       console.log("Starting fetch...");
       const response = await fetch("http://localhost:8000/process-audio/", {
         method: "POST",
         body: formData,
       });
-      
-      
-      const data = await response.json();
-      // console.log("Response parsed:", data);
-    
-      if (data.message) {
-        alert(data.message);
-        setLoading(false)
-        // navigate('/video')
-        // setShowModal(true);
-        // e.preventDefault()
-      } else {
-        console.error("Error:", data.error);
+      if(response.ok){
+        const d = await response.json();
+        if (d.message === 'Processing completed successfully!') {
+          console.log("sentence: :"+ d.result.sentence)
+          console.log("time: "+ d.result.duration)
+          const durations = d.result.duration;
+          const sentence= d.result.sentence
+          // Split the sentence by spaces and map to durations
+          const words = sentence.split(/\s+/);
+          const wordDurationPairs = words.map((word, index) => ({
+            word,
+            duration: durations[index] || 0, // Handle cases where durations might not match
+          }));
+
+          // Save the mapped pairs to local storage
+          localStorage.setItem("wordDurationPairs", JSON.stringify(wordDurationPairs));
+
+          setLoading(false); 
+          navigate('/video'); // Use the response value directly
+        } else {
+          console.error("Error:", d.error);
+        }
+      }
+      else{
+        console.log("sorry, response not ok")
       }
     } catch (error) {
       console.error("Error processing audio:", error);
+      setLoading(false); // Reset loading on error
     }
+  
     setText(""); // Clear the input
     setAudioFile(null); // Clear the audio file
     setAudioURL("");
   };
+    
 
  
     
@@ -165,20 +181,20 @@ const AudioPage = () => {
         </div>
       ):  (
         <>
-          <div className="h-screen w-full border-2 border-teal-950 shadow-md shadow-black flex justify-center items-center">
+          <div className="h-screen w-full border-2 border-teal-950 shadow-md shadow-black text-white flex justify-center items-center">
       <div
         className="h-full w-full flex justify-around items-center flex-col p-5 "
         style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
       >
 
-        <div className="text-center h-[20%] ">
+        <div className="text-center h-[20%] text-white">
         <h1 style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)" }}>GESTURE BRIDGE</h1>
         <h4 style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)" }}> Record, Type and Upload Videos </h4>
 
         </div>
 
       
-      <div className="flex flex-col text-center justify-center h[40%]">
+      <div className="flex text-white flex-col text-center justify-center h[40%]">
         <VoiceInputButton handleVoice={handleVoiceInput}
         />
         <p className="my-3 text-md font-bold text-gray-300 ">{isRecording ? "Stop " : "Record Voice"} </p>
@@ -209,24 +225,33 @@ const AudioPage = () => {
         </div>
 
         <div className="m-[10%] w-full flex justify-between space-x-4 h-[8%] ">
-          <input
-            type="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="Type something..."
-            className="form-control w-[80%] bg-gray-700"
-            style={{
-              fontSize: "1.2rem",
-              padding: "10px",
-              flexGrow: 1,
-              backgroundColor:'#D3D3D3',
-              width: '50%',
-              
-            }}
-          />
-          <button type="button" className=" text-white py-3 px-6 rounded-[3rem] text-sm font-semibold transition transform hover:scale-105 bg-teal-950 hover:bg-green-800 hover:shadow-sm hover:shadow-black" onClick={handleSend}>
-        Play Video
-        </button>
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Type something..."
+          className="form-control w-[80%] bg-gray-700"
+          style={{
+            fontSize: "1.2rem",
+            padding: "10px",
+            flexGrow: 1,
+            backgroundColor: '#D3D3D3',
+            width: '50%',
+          }}
+        />
+        <button
+        type="button"
+        disabled={!text} // Button is disabled when text is empty
+        className={`text-sm py-3 px-6 rounded-[3rem] font-semibold transition transform 
+          ${!text ? 'bg-gray-500 text-gray-300 cursor-not-allowed' : 'bg-teal-950 hover:bg-green-800 hover:shadow-sm hover:shadow-black hover:scale-105'} 
+          ${!text ? 'opacity-70' : 'opacity-100'}`}
+        onClick={handleSend}
+      >
+        Upload Text
+      </button>
+
+
+
         </div>
 
         <div className="mb-4 w-100">
@@ -264,7 +289,7 @@ const AudioPage = () => {
         </Modal> */}
 
         {/* Modal to show the video */}
-        <Button type="button" variant="secondary" onClick={()=>setShowModal(true)} className="  mb-28" >
+        <Button type="button" variant="secondary" onClick={()=>{navigate('/video')}} className="  mb-28" >
           Show video
         </Button>
       </div>

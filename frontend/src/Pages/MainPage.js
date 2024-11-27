@@ -144,19 +144,7 @@ const MainPage = () => {
       })
       .then((blob) => {
         const videoBlobURL = URL.createObjectURL(blob); // Create a local URL for the video
-        console.log("Fetched video blob URL:", videoBlobURL);
         setVideoURL(videoBlobURL);
-        // Wait until the modal is fully rendered before accessing the video element
-        // setTimeout(() => {
-        //   const videoElement = document.getElementById("videoElement"); // Get the video element
-        //   if (videoElement) {
-        //     videoElement.src = videoBlobURL; // Set the video source to the fetched video
-        //     console.log(videoElement);
-        //     videoElement.load(); // Reload the video element with the new source
-        //   } else {
-        //     console.error("Video element not found in the DOM.");
-        //   }
-        // }, 300); // Added a delay to ensure the modal and video are rendered
       })
       .catch((error) => {
         console.error("Error fetching video:", error);
@@ -190,7 +178,6 @@ const MainPage = () => {
               maxWidth: "300px",
             }}
           />
-          
         </div>
 
         <button
@@ -219,7 +206,7 @@ const MainPage = () => {
         {audioFile && (
           <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
             <button onClick={handleSend} className="btn btn-success me-2 mb-2">
-              Send
+              Upload
             </button>
             <button
               onClick={handleDelete}
@@ -239,12 +226,11 @@ const MainPage = () => {
             <Modal.Title>Video Preview</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {/* Video element displaying the video from the public folder */}
             <video
               width="100%"
               height="auto"
               controls
-              src="/new_video.mp4" // Reference the video using relative path
+              src={videoURL} // Use the fetched video URL here
             >
               Your browser does not support the video tag.
             </video>

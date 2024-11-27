@@ -31,26 +31,33 @@ def create_text_mapping(json_file):
     return ms_text_mapping
 
 
-def get_video_ids_for_sentence(sentence, gloss_to_video,ms_text_mapping):
+def get_video_ids_for_sentence(sentence, gloss_to_video, ms_text_mapping):
     words = sentence.split()
-    video_ids = []
-    video_dir = os.path.join(os.path.dirname(__file__),  '../../dataset/WLASL2000')
-    video_dir_for_msasl= os.path.join(os.path.dirname(__file__),  '../../dataset/MSASL')
+    grouped_video_ids = []
+    video_dir = os.path.join(os.path.dirname(__file__), '../../dataset/WLASL2000')
+    video_dir_for_msasl = os.path.join(os.path.dirname(__file__), '../../dataset/MSASL')
+
     for word in words:
+        word_video_ids = []  # Grouped video IDs for the current word
+
         if word in gloss_to_video:
-            for id in gloss_to_video[word]:
-                if os.path.exists( os.path.join(video_dir, f"{id}.mp4")):
-                    video_ids.append(id)
-                    break  # Get the first video ID for simplicity
-        else:
-            if word in ms_text_mapping:
-                video_ids.append("$"+word)
-            else:
-                for letter in word:
-                    video_ids.append("/"+letter.upper())
-                   
-    log_text("video_ids : ",video_ids)
-    return video_ids
+            for vid in gloss_to_video[word]:
+                if os.path.exists(os.path.join(video_dir, f"{vid}.mp4")):
+                    word_video_ids.append(vid)
+                    break  # Use the first available video for simplicity
+
+        elif word in ms_text_mapping:
+            word_video_ids.append(f"${word}")  # Prefix for MSASL dataset
+
+        else:  # Word not found in mappings, fallback to letter mapping
+            for letter in word:
+                word_video_ids.append(f"/{letter.upper()}")  # Use letter images
+
+        grouped_video_ids.append(word_video_ids)  # Add this word's group to the main list
+
+    log_text("Grouped video IDs: ", grouped_video_ids)
+    return grouped_video_ids
+
 
 async def repair_video():
     input_file = os.path.join(os.path.dirname(__file__),  '../../frontend/public/concatenated_video.mp4')  # Path to your corrupted video
@@ -77,76 +84,83 @@ async def repair_video():
 
 def concatenate_videos(video_ids, video_dir, output_path):
     video_clips = []
-    clip_durations=[]
+    clip_durations = []
     frame_size = None
-    fps = None
-    video_dir =os.path.join(os.path.dirname(__file__),  '../../dataset/WLASL2000')
-    video_dir_for_ms=os.path.join(os.path.dirname(__file__),  '../../dataset/MSASL')
-    
-    for video_id in video_ids:
+    fps = 25  # Default FPS
+    video_dir = os.path.join(os.path.dirname(__file__), '../../dataset/WLASL2000')
+    video_dir_for_ms = os.path.join(os.path.dirname(__file__), '../../dataset/MSASL')
+    letters_dir = os.path.join(os.path.dirname(__file__), "../../dataset/letters/")
 
-        if video_id.startswith("/"):
-            image_path=os.path.join(os.path.dirname(__file__), "../../dataset/letters/",f"{video_id[1:]}_test.jpg")
-            log_text("image_path : ",image_path)
-            default_image=cv2.imread(image_path)
-            log_text(f"Video file not found. Using default image.{image_path}")
-            fps = 25
-            if default_image is None:
-                log_text(f"Default image {image_path} not found or cannot be read. Skipping.")
-                continue
-            if fps is None:
-                fps = 25 
-            if frame_size is None:
-                frame_size = (default_image.shape[1], default_image.shape[0])
-            if (default_image.shape[1], default_image.shape[0]) != frame_size:
-                default_image = cv2.resize(default_image, frame_size)
-            for _ in range(int(fps*1.5)): 
-                # log_text("adding")
-                video_clips.append(default_image)
-            clip_durations.append(1.5)
+    for word_video_ids in video_ids:
+        word_clips = []  # Clips for the current word
+        word_duration = 0  # Duration accumulator for the current word
 
-        else:
-            if video_id.startswith("$"):
-                video_path = os.path.join(video_dir_for_ms, f"{video_id[1:]}.mp4")
-            else:
-                video_path=os.path.join(video_dir,f"{video_id}.mp4")
+        for video_id in word_video_ids:
+            if video_id.startswith("/"):  # Letter image case
+                letter_path = os.path.join(letters_dir, f"{video_id[1:]}_test.jpg")
+                letter_image = cv2.imread(letter_path)
 
-            cap = cv2.VideoCapture(video_path)
-            
-            if not cap.isOpened():
-                log_text(f"Error opening video file {video_path}. Skipping.")
-                continue
+                if letter_image is None:
+                    log_text(f"Letter image {letter_path} not found. Skipping.")
+                    continue
 
-            if frame_size is None or fps is None:
-                frame_size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-                fps = cap.get(cv2.CAP_PROP_FPS)
-            
-            frame_count=0
-            while cap.isOpened():
-                ret, frame = cap.read()
-                if not ret:
-                    break
-                if frame_size is not None and (frame.shape[1], frame.shape[0]) != frame_size:
-                    frame = cv2.resize(frame, frame_size)
-                video_clips.append(frame)
-                frame_count+=1
-            
-            cap.release()
-            duration=frame_count/fps
-            clip_durations.append(duration)
+                if frame_size is None:
+                    frame_size = (letter_image.shape[1], letter_image.shape[0])
+                elif (letter_image.shape[1], letter_image.shape[0]) != frame_size:
+                    letter_image = cv2.resize(letter_image, frame_size)
+
+                # Add frames for 1.5 seconds
+                for _ in range(int(fps * 1.5)):
+                    word_clips.append(letter_image)
+
+                word_duration += 1.50
+
+            else:  # Video case
+                if video_id.startswith("$"):  # MSASL dataset
+                    video_path = os.path.join(video_dir_for_ms, f"{video_id[1:]}.mp4")
+                else:  # WLASL2000 dataset
+                    video_path = os.path.join(video_dir, f"{video_id}.mp4")
+
+                cap = cv2.VideoCapture(video_path)
+
+                if not cap.isOpened():
+                    log_text(f"Error opening video file {video_path}. Skipping.")
+                    continue
+
+                if frame_size is None:
+                    frame_size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
+                frame_count = 0
+
+                while cap.isOpened():
+                    ret, frame = cap.read()
+                    if not ret:
+                        break
+                    if frame_size is not None and (frame.shape[1], frame.shape[0]) != frame_size:
+                        frame = cv2.resize(frame, frame_size)
+                    word_clips.append(frame)
+                    frame_count += 1
+
+                cap.release()
+                word_duration += frame_count / fps
+                word_duration-= 0.01
+                
+
+        # Add word clips to main video
+        video_clips.extend(word_clips)
+        clip_durations.append(word_duration*0.9)
 
     if not video_clips:
         log_text("No video clips to concatenate.")
-        return
+        return []
+
+    # Write video clips to file
     out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, frame_size)
-    
     for clip in video_clips:
         out.write(clip)
-    log_text(len(video_clips))
     out.release()
+
     log_text(f"Output video saved to {output_path}")
     return clip_durations
-    # Initialize VideoWriter
 
 async def convert_text_to_sign(text):
     
@@ -167,6 +181,22 @@ async def convert_text_to_sign(text):
     video_path= os.path.join(os.path.dirname(__file__),  '../../frontend/public/fixed_video.mp4')
     
     log_text(duration)
+
+    words = sentence.split()
+    if len(words) != len(duration):
+        log_text(f"Length mismatch - words: {len(words)}, durations: {len(duration)}. Padding durations.")
+        duration.extend([0] * (len(words) - len(duration)))  # Pad durations if needed
+
+    word_duration_pairs = [
+        {"word": word, "duration": duration[i]} for i, word in enumerate(words)
+    ]
+    # Write to JSON file
+    output_json_path = os.path.join(os.path.dirname(__file__), '../../frontend/public/word_duration.json')
+    with open(output_json_path, 'w') as json_file:
+        json.dump(word_duration_pairs, json_file, indent=4)
+
+    log_text("Word-Duration pairs written to JSON:", word_duration_pairs)
+
     return sentence,duration
 
 if __name__ == '__main__':
