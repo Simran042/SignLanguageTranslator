@@ -8,14 +8,13 @@ const VideoPage = () => {
   // State to store word-duration pairs fetched from JSON
   const [wordDurationPairs, setWordDurationPairs] = useState([]);
 
-  // State to track the current highlighted word
-  const [currentWord, setCurrentWord] = useState("");
+  // State to track the current highlighted word and its index
+  const [currentWordIndex, setCurrentWordIndex] = useState(null);
 
   // Fetch data from the word_duration.json file
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Correcting the file path to public directory
         const response = await fetch("/word_duration.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -32,18 +31,20 @@ const VideoPage = () => {
 
   // Function to handle word highlighting
   const handleWordHighlight = (currentTime) => {
-    let highlightedWord = "";
     let accumulatedTime = 0;
+    let highlightedIndex = null;
 
-    for (const { word, duration } of wordDurationPairs) {
+    for (let i = 0; i < wordDurationPairs.length; i++) {
+      const { duration } = wordDurationPairs[i];
       accumulatedTime += duration;
+
       if (currentTime <= accumulatedTime) {
-        highlightedWord = word;
+        highlightedIndex = i; // Track the index of the word
         break;
       }
     }
 
-    setCurrentWord(highlightedWord);
+    setCurrentWordIndex(highlightedIndex);
   };
 
   return (
@@ -73,7 +74,6 @@ const VideoPage = () => {
         </button>
       </div>
 
-    
       <div>
         <ReactPlayer
           url="fixed_video.mp4"
@@ -89,11 +89,11 @@ const VideoPage = () => {
       <div>
         {wordDurationPairs.length > 0 ? (
           <h1 style={{ color: "white", fontSize: "2rem" }}>
-            {wordDurationPairs.map(({ word }) => (
+            {wordDurationPairs.map(({ word }, index) => (
               <span
-                key={word}
+                key={index} // Use the index as the key
                 style={{
-                  color: word === currentWord ? "yellow" : "white",
+                  color: index === currentWordIndex ? "yellow" : "white", // Highlight only the current word
                   marginRight: "0.5rem",
                 }}
               >
@@ -105,8 +105,6 @@ const VideoPage = () => {
           <p style={{ color: "white" }}>Loading words...</p>
         )}
       </div>
-        <div></div>
-        <div></div>
     </div>
   );
 };
