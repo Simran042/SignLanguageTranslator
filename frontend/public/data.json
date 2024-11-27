@@ -1,0 +1,13 @@
+{
+    "sentence": "america india",
+    "duration": [
+        2.6550000000000002,
+        3.051
+    ],
+    "ner": [
+        "america"
+    ],
+    "description": [
+        "The United States of America (USA), commonly known as the United States (U.S.) or America, is a country primarily located in North America. It is a federal union of 50 states and a federal capital district, Washington, D.C. The 48 contiguous states border Canada to the north and Mexico to the south, with the states of Alaska to the northwest and the archipelagic Hawaii in the Pacific Ocean."
+    ]
+}

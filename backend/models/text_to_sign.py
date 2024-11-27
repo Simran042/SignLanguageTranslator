@@ -4,6 +4,8 @@ import os
 from .preprocess import preprocess_text
 import ffmpeg
 import sys
+import json
+
 
 def log_text(text,message=""):
     log_file=os.path.join(os.path.dirname(__file__),  '../../log.txt')
@@ -167,7 +169,10 @@ async def convert_text_to_sign(text):
     json_file =  os.path.join(os.path.dirname(__file__), '../../dataset/WLASL_v0.3.json')
 
     video_dir =os.path.join(os.path.dirname(__file__),  '../../dataset/WLASL2000')
-    sentence = preprocess_text(text)
+    sentence,ner,text_description = preprocess_text(text)
+
+    print("nkjnk",ner)
+    # log_text(ner,text_description)
     log_text("sentence : ",sentence)
     output_path = os.path.join(os.path.dirname(__file__),  '../../frontend/public/concatenated_video.mp4')
     gloss_to_video = create_gloss_to_video_mapping(json_file)
@@ -197,7 +202,9 @@ async def convert_text_to_sign(text):
 
     log_text("Word-Duration pairs written to JSON:", word_duration_pairs)
 
-    return sentence,duration
+    
+
+    return sentence,duration,ner,text_description
 
 if __name__ == '__main__':
     text="Will you come to market with me"

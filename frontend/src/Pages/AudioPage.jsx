@@ -48,20 +48,48 @@ const AudioPage = () => {
         if (d.message === 'Processing completed successfully!') {
           console.log("sentence: :"+ d.result.sentence)
           console.log("time: "+ d.result.duration)
+          console.log("ner"+d.result.ner)
           const durations = d.result.duration;
           const sentence= d.result.sentence
+          const ner=d.result.ner
+          const description=d.result.description
+          console.log(ner)
+          console.log(description)
           // Split the sentence by spaces and map to durations
           const words = sentence.split(/\s+/);
-          const wordDurationPairs = words.map((word, index) => ({
-            word,
-            duration: durations[index] || 0, // Handle cases where durations might not match
-          }));
+          
+          const wordDurationPairs = words.map((word, index) => {
+            // Check if the current word is in the ner array
+            const nerIndex = ner.indexOf(word);
+            const desc=nerIndex !== -1 ? description[nerIndex] : ""
+            
+            return {
+              word,
+              duration: durations[index] || 0,
+              description:desc
+            };
+          });
+
+          const wordDescriptionPairs= words.map((word, index) => {
+            // Check if the current word is in the ner array
+            const nerIndex = ner.indexOf(word);
+            let desc=nerIndex !== -1 ? description[nerIndex] : ""
+            
+            return {
+              word,
+              description:desc
+            };
+          });
+
 
           // Save the mapped pairs to local storage
           localStorage.setItem("wordDurationPairs", JSON.stringify(wordDurationPairs));
+          localStorage.setItem("wordDescriptionPairs", JSON.stringify(wordDescriptionPairs));
+
 
           setLoading(false); 
           navigate('/video'); // Use the response value directly
+          
         } else {
           console.error("Error:", d.error);
         }
@@ -164,7 +192,7 @@ const AudioPage = () => {
         console.error("Error uploading audio:", error);
       });
 
-     setVideoURL("");
+    //  setVideoURL("");
   };
 
   const percentage = 100;
