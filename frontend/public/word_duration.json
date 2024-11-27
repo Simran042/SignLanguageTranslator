@@ -1,26 +1,34 @@
 [
     {
-        "word": "stop",
-        "duration": 1.251
+        "word": "girl",
+        "duration": 1.755
     },
     {
-        "word": "wait",
+        "word": "girl",
+        "duration": 1.755
+    },
+    {
+        "word": "i",
+        "duration": 0.747
+    },
+    {
+        "word": "girl",
+        "duration": 1.755
+    },
+    {
+        "word": "boy",
         "duration": 1.9350000000000003
     },
     {
-        "word": "for",
-        "duration": 1.539
+        "word": "not",
+        "duration": 1.4669999999999999
     },
     {
-        "word": "waiter",
-        "duration": 1.647
+        "word": "boy",
+        "duration": 1.9350000000000003
     },
     {
-        "word": "will",
-        "duration": 1.647
-    },
-    {
-        "word": "come",
-        "duration": 1.251
+        "word": "i",
+        "duration": 0.747
     }
 ]

@@ -193,7 +193,10 @@ const AudioPage = () => {
 
         </div>
 
-      
+        <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+          <div style={{ height: "50px" }}></div>
+        </div>
+
       <div className="flex text-white flex-col text-center justify-center h[40%]">
         <VoiceInputButton handleVoice={handleVoiceInput}
         />

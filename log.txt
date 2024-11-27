@@ -894,3 +894,80 @@ Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslato
 Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
 [1.251, 1.9350000000000003, 1.539, 1.647, 1.647, 1.251]
 Word-Duration pairs written to JSON:[{'word': 'stop', 'duration': 1.251}, {'word': 'wait', 'duration': 1.9350000000000003}, {'word': 'for', 'duration': 1.539}, {'word': 'waiter', 'duration': 1.647}, {'word': 'will', 'duration': 1.647}, {'word': 'come', 'duration': 1.251}]
+sentence : happy sun moon me dog position cat
+Grouped video IDs: [['26506'], ['55810'], ['36774'], ['35267'], ['17076'], ['43799'], ['09431']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.9350000000000003, 2.6550000000000002, 1.539, 1.251, 1.9350000000000003, 1.8630000000000002, 1.755]
+Word-Duration pairs written to JSON:[{'word': 'happy', 'duration': 1.9350000000000003}, {'word': 'sun', 'duration': 2.6550000000000002}, {'word': 'moon', 'duration': 1.539}, {'word': 'me', 'duration': 1.251}, {'word': 'dog', 'duration': 1.9350000000000003}, {'word': 'position', 'duration': 1.8630000000000002}, {'word': 'cat', 'duration': 1.755}]
+sentence : gesture bridge tool to record voice and convert to picture and type thing and convert picture for deaf
+Grouped video IDs: [['/G', '/E', '/S', '/T', '/U', '/R', '/E'], ['07747'], ['/T', '/O', '/O', '/L'], ['58629'], ['/R', '/E', '/C', '/O', '/R', '/D'], ['61913'], ['02517'], ['13106'], ['58629'], ['42649'], ['02517'], ['60304'], ['57921'], ['02517'], ['13106'], ['42649'], ['22836'], ['14855']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[9.450000000000001, 1.4669999999999999, 5.4, 1.251, 8.1, 2.2590000000000003, 1.359, 3.6990000000000003, 1.251, 2.079, 1.359, 0.9630000000000001, 1.035, 1.359, 3.6990000000000003, 2.079, 1.539, 1.4669999999999999]
+Word-Duration pairs written to JSON:[{'word': 'gesture', 'duration': 9.450000000000001}, {'word': 'bridge', 'duration': 1.4669999999999999}, {'word': 'tool', 'duration': 5.4}, {'word': 'to', 'duration': 1.251}, {'word': 'record', 'duration': 8.1}, {'word': 'voice', 'duration': 2.2590000000000003}, {'word': 'and', 'duration': 1.359}, {'word': 'convert', 'duration': 3.6990000000000003}, {'word': 'to', 'duration': 1.251}, {'word': 'picture', 'duration': 2.079}, {'word': 'and', 'duration': 1.359}, {'word': 'type', 'duration': 0.9630000000000001}, {'word': 'thing', 'duration': 1.035}, {'word': 'and', 'duration': 1.359}, {'word': 'convert', 'duration': 3.6990000000000003}, {'word': 'picture', 'duration': 2.079}, {'word': 'for', 'duration': 1.539}, {'word': 'deaf', 'duration': 1.4669999999999999}]
+sentence : happy you
+Grouped video IDs: [['26506'], ['64351']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.9350000000000003, 1.539]
+Word-Duration pairs written to JSON:[{'word': 'happy', 'duration': 1.9350000000000003}, {'word': 'you', 'duration': 1.539}]
+sentence : i girl you
+Grouped video IDs: [['28557'], ['24590'], ['64351']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[0.747, 1.755, 1.539]
+Word-Duration pairs written to JSON:[{'word': 'i', 'duration': 0.747}, {'word': 'girl', 'duration': 1.755}, {'word': 'you', 'duration': 1.539}]
+sentence : hello my name sakshi
+Grouped video IDs: [['27171'], ['37464'], ['37575'], ['/S', '/A', '/K', '/S', '/H', '/I']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.4669999999999999, 1.179, 1.359, 8.1]
+Word-Duration pairs written to JSON:[{'word': 'hello', 'duration': 1.4669999999999999}, {'word': 'my', 'duration': 1.179}, {'word': 'name', 'duration': 1.359}, {'word': 'sakshi', 'duration': 8.1}]
+sentence : thank you
+Grouped video IDs: [['/T', '/H', '/A', '/N', '/K'], ['64351']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[6.75, 1.539]
+Word-Duration pairs written to JSON:[{'word': 'thank', 'duration': 6.75}, {'word': 'you', 'duration': 1.539}]
+sentence : 
+Grouped video IDs: []
+No video clips to concatenate.
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[]
+Word-Duration pairs written to JSON:[]
+sentence : u
+Grouped video IDs: [['60338']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[0.747]
+Word-Duration pairs written to JSON:[{'word': 'u', 'duration': 0.747}]
+sentence : life one word that come with multiple meaning and experience above all life not about existence only also about how person defines that existence
+Grouped video IDs: [['/L', '/I', '/F', '/E'], ['69421'], ['63750'], ['57669'], ['11839'], ['63574'], ['/M', '/U', '/L', '/T', '/I', '/P', '/L', '/E'], ['35306'], ['02517'], ['20374'], ['00429'], ['01912'], ['/L', '/I', '/F', '/E'], ['38765'], ['00412'], ['/E', '/X', '/I', '/S', '/T', '/E', '/N', '/C', '/E'], ['39873'], ['02173'], ['00412'], ['28187'], ['42196'], ['/D', '/E', '/F', '/I', '/N', '/E', '/S'], ['57669'], ['/E', '/X', '/I', '/S', '/T', '/E', '/N', '/C', '/E']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[5.4, 2.043, 1.4669999999999999, 1.179, 1.251, 2.079, 10.8, 2.079, 1.359, 1.359, 1.539, 1.539, 5.4, 1.4669999999999999, 1.755, 12.15, 1.359, 1.539, 1.755, 1.179, 1.359, 9.450000000000001, 1.179, 12.15]
+Word-Duration pairs written to JSON:[{'word': 'life', 'duration': 5.4}, {'word': 'one', 'duration': 2.043}, {'word': 'word', 'duration': 1.4669999999999999}, {'word': 'that', 'duration': 1.179}, {'word': 'come', 'duration': 1.251}, {'word': 'with', 'duration': 2.079}, {'word': 'multiple', 'duration': 10.8}, {'word': 'meaning', 'duration': 2.079}, {'word': 'and', 'duration': 1.359}, {'word': 'experience', 'duration': 1.359}, {'word': 'above', 'duration': 1.539}, {'word': 'all', 'duration': 1.539}, {'word': 'life', 'duration': 5.4}, {'word': 'not', 'duration': 1.4669999999999999}, {'word': 'about', 'duration': 1.755}, {'word': 'existence', 'duration': 12.15}, {'word': 'only', 'duration': 1.359}, {'word': 'also', 'duration': 1.539}, {'word': 'about', 'duration': 1.755}, {'word': 'how', 'duration': 1.179}, {'word': 'person', 'duration': 1.359}, {'word': 'defines', 'duration': 9.450000000000001}, {'word': 'that', 'duration': 1.179}, {'word': 'existence', 'duration': 12.15}]
+sentence : cat dog moon sun cat dog
+Grouped video IDs: [['09431'], ['17076'], ['36774'], ['55810'], ['09431'], ['17076']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.755, 1.9350000000000003, 1.539, 2.6550000000000002, 1.755, 1.9350000000000003]
+Word-Duration pairs written to JSON:[{'word': 'cat', 'duration': 1.755}, {'word': 'dog', 'duration': 1.9350000000000003}, {'word': 'moon', 'duration': 1.539}, {'word': 'sun', 'duration': 2.6550000000000002}, {'word': 'cat', 'duration': 1.755}, {'word': 'dog', 'duration': 1.9350000000000003}]
+sentence : girl girl i girl boy not boy i
+Grouped video IDs: [['24590'], ['24590'], ['28557'], ['24590'], ['07436'], ['38765'], ['07436'], ['28557']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.755, 1.755, 0.747, 1.755, 1.9350000000000003, 1.4669999999999999, 1.9350000000000003, 0.747]
+Word-Duration pairs written to JSON:[{'word': 'girl', 'duration': 1.755}, {'word': 'girl', 'duration': 1.755}, {'word': 'i', 'duration': 0.747}, {'word': 'girl', 'duration': 1.755}, {'word': 'boy', 'duration': 1.9350000000000003}, {'word': 'not', 'duration': 1.4669999999999999}, {'word': 'boy', 'duration': 1.9350000000000003}, {'word': 'i', 'duration': 0.747}]
