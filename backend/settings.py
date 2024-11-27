@@ -14,6 +14,7 @@ import os
 # Add this configuration if not already present
 
 from pathlib import Path
+from django.core.wsgi import get_wsgi_application
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,8 +32,8 @@ SECRET_KEY = 'django-insecure-c@u6g9he45t*0^p07_*e!8l-_h&!587#+==8e3zem@fh_0_$d2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# api/settings.py
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'localhost']
 
 # Application definition
 
@@ -78,9 +79,11 @@ TEMPLATES = [
         },
     },
 ]
-
+# api/wsgi.py
+app = get_wsgi_application()
+#WSGI_APPLICATION = 'backend.wsgi.application'
+# api/settings.py
 WSGI_APPLICATION = 'backend.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases

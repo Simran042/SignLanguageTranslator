@@ -1,42 +1,98 @@
-sentence : 
-video_ids : []
-No video clips to concatenate.
-sentence : 
-video_ids : []
-No video clips to concatenate.
-sentence : 
-video_ids : []
-No video clips to concatenate.
-sentence : nice
-video_ids : ['38281']
-Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
-Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
-Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
-sentence : nice
-video_ids : ['38281']
-Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
-Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
-Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
-sentence : nice
-video_ids : ['38281']
-Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
-Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
-Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
-sentence : nice
-video_ids : ['38281']
-Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
-Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
-Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
-sentence : today we have obama here in america
-Grouped video IDs: [['58676'], ['62583'], ['26757'], ['/O', '/B', '/A', '/M', '/A'], ['27254'], ['29171'], ['02348']]
-Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
-Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
-[1.647, 1.4669999999999999, 1.251, 6.75, 1.539, 0.747, 2.6550000000000002]
-Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.647}, {'word': 'we', 'duration': 1.4669999999999999}, {'word': 'have', 'duration': 1.251}, {'word': 'obama', 'duration': 6.75}, {'word': 'here', 'duration': 1.539}, {'word': 'in', 'duration': 0.747}, {'word': 'america', 'duration': 2.6550000000000002}]
-sentence : today today obama america we america
-Grouped video IDs: [['58676'], ['58676'], ['/O', '/B', '/A', '/M', '/A'], ['02348'], ['62583'], ['02348']]
-Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
-Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
-Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
-[1.647, 1.647, 6.75, 2.6550000000000002, 1.4669999999999999, 2.6550000000000002]
-Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.647}, {'word': 'today', 'duration': 1.647}, {'word': 'obama', 'duration': 6.75}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'we', 'duration': 1.4669999999999999}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : today hello i obama fromm america and good
+Grouped video IDs: [['58676'], ['27171'], ['28557'], ['/O', '/B', '/A', '/M', '/A'], ['/F', '/R', '/O', '/M', '/M'], ['02348'], ['02517'], ['25037']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.647, 1.4669999999999999, 0.747, 6.75, 6.75, 2.6550000000000002, 1.359, 1.359]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.647}, {'word': 'hello', 'duration': 1.4669999999999999}, {'word': 'i', 'duration': 0.747}, {'word': 'obama', 'duration': 6.75}, {'word': 'fromm', 'duration': 6.75}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'and', 'duration': 1.359}, {'word': 'good', 'duration': 1.359}]
+sentence : today today obama america america
+Grouped video IDs: [['58676'], ['58676'], ['/O', '/B', '/A', '/M', '/A'], ['02348'], ['02348']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.647, 1.647, 6.75, 2.6550000000000002, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.647}, {'word': 'today', 'duration': 1.647}, {'word': 'obama', 'duration': 6.75}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : i obama from america and joe biden and trump from u
+Grouped video IDs: [['28557'], ['/O', '/B', '/A', '/M', '/A'], ['23637'], ['02348'], ['02517'], ['/J', '/O', '/E'], ['/B', '/I', '/D', '/E', '/N'], ['02517'], ['/T', '/R', '/U', '/M', '/P'], ['23637'], ['60338']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[0.747, 6.75, 1.359, 2.6550000000000002, 1.359, 4.05, 6.75, 1.359, 6.75, 1.359, 0.747]
+Word-Duration pairs written to JSON:[{'word': 'i', 'duration': 0.747}, {'word': 'obama', 'duration': 6.75}, {'word': 'from', 'duration': 1.359}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'and', 'duration': 1.359}, {'word': 'joe', 'duration': 4.05}, {'word': 'biden', 'duration': 6.75}, {'word': 'and', 'duration': 1.359}, {'word': 'trump', 'duration': 6.75}, {'word': 'from', 'duration': 1.359}, {'word': 'u', 'duration': 0.747}]
+sentence : i obama from america and joe biden and trump from united state
+Grouped video IDs: [['28557'], ['/O', '/B', '/A', '/M', '/A'], ['23637'], ['02348'], ['02517'], ['/J', '/O', '/E'], ['/B', '/I', '/D', '/E', '/N'], ['02517'], ['/T', '/R', '/U', '/M', '/P'], ['23637'], ['/U', '/N', '/I', '/T', '/E', '/D'], ['/S', '/T', '/A', '/T', '/E']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[0.747, 6.75, 1.359, 2.6550000000000002, 1.359, 4.05, 6.75, 1.359, 6.75, 1.359, 8.1, 6.75]
+Word-Duration pairs written to JSON:[{'word': 'i', 'duration': 0.747}, {'word': 'obama', 'duration': 6.75}, {'word': 'from', 'duration': 1.359}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'and', 'duration': 1.359}, {'word': 'joe', 'duration': 4.05}, {'word': 'biden', 'duration': 6.75}, {'word': 'and', 'duration': 1.359}, {'word': 'trump', 'duration': 6.75}, {'word': 'from', 'duration': 1.359}, {'word': 'united', 'duration': 8.1}, {'word': 'state', 'duration': 6.75}]
+sentence : moon
+Grouped video IDs: [['36774']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.539]
+Word-Duration pairs written to JSON:[{'word': 'moon', 'duration': 1.539}]
+sentence : today i girl from u america and i meet obama i happy
+Grouped video IDs: [['58676'], ['28557'], ['24590'], ['23637'], ['60338'], ['02348'], ['02517'], ['28557'], ['35506'], ['/O', '/B', '/A', '/M', '/A'], ['28557'], ['26506']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.647, 0.747, 1.755, 1.359, 0.747, 2.6550000000000002, 1.359, 0.747, 0.9630000000000001, 6.75, 0.747, 1.9350000000000003]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.647}, {'word': 'i', 'duration': 0.747}, {'word': 'girl', 'duration': 1.755}, {'word': 'from', 'duration': 1.359}, {'word': 'u', 'duration': 0.747}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'and', 'duration': 1.359}, {'word': 'i', 'duration': 0.747}, {'word': 'meet', 'duration': 0.9630000000000001}, {'word': 'obama', 'duration': 6.75}, {'word': 'i', 'duration': 0.747}, {'word': 'happy', 'duration': 1.9350000000000003}]
+sentence : today i girl meet obama america and i happy taylor
+Grouped video IDs: [['58676'], ['28557'], ['24590'], ['35506'], ['/O', '/B', '/A', '/M', '/A'], ['02348'], ['02517'], ['28557'], ['26506'], ['/T', '/A', '/Y', '/L', '/O', '/R']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.6560000000000001, 0.756, 1.764, 0.9720000000000001, 6.75, 2.664, 1.368, 0.756, 1.9440000000000002, 8.1]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.6560000000000001}, {'word': 'i', 'duration': 0.756}, {'word': 'girl', 'duration': 1.764}, {'word': 'meet', 'duration': 0.9720000000000001}, {'word': 'obama', 'duration': 6.75}, {'word': 'america', 'duration': 2.664}, {'word': 'and', 'duration': 1.368}, {'word': 'i', 'duration': 0.756}, {'word': 'happy', 'duration': 1.9440000000000002}, {'word': 'taylor', 'duration': 8.1}]
+sentence : united state america usa commonly know united state u or america nation primarily located in north america federal union 50 state and federal capital district washington dc
+Grouped video IDs: [['/U', '/N', '/I', '/T', '/E', '/D'], ['/S', '/T', '/A', '/T', '/E'], ['02348'], ['/U', '/S', '/A'], ['/C', '/O', '/M', '/M', '/O', '/N', '/L', '/Y'], ['31896'], ['/U', '/N', '/I', '/T', '/E', '/D'], ['/S', '/T', '/A', '/T', '/E'], ['60338'], ['40093'], ['02348'], ['37669'], ['/P', '/R', '/I', '/M', '/A', '/R', '/I', '/L', '/Y'], ['/L', '/O', '/C', '/A', '/T', '/E', '/D'], ['29171'], ['38654'], ['02348'], ['21368'], ['/U', '/N', '/I', '/O', '/N'], ['$50'], ['/S', '/T', '/A', '/T', '/E'], ['02517'], ['21368'], ['/C', '/A', '/P', '/I', '/T', '/A', '/L'], ['/D', '/I', '/S', '/T', '/R', '/I', '/C', '/T'], ['62384'], ['/D', '/C']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[9.0, 7.5, 2.96, 4.5, 12.0, 1.72, 9.0, 7.5, 0.84, 1.32, 2.96, 1.64, 13.5, 10.5, 0.84, 1.84, 2.96, 1.84, 7.5, 145.72, 7.5, 1.52, 1.84, 10.5, 12.0, 2.72, 3.0]
+Word-Duration pairs written to JSON:[{'word': 'united', 'duration': 9.0}, {'word': 'state', 'duration': 7.5}, {'word': 'america', 'duration': 2.96}, {'word': 'usa', 'duration': 4.5}, {'word': 'commonly', 'duration': 12.0}, {'word': 'know', 'duration': 1.72}, {'word': 'united', 'duration': 9.0}, {'word': 'state', 'duration': 7.5}, {'word': 'u', 'duration': 0.84}, {'word': 'or', 'duration': 1.32}, {'word': 'america', 'duration': 2.96}, {'word': 'nation', 'duration': 1.64}, {'word': 'primarily', 'duration': 13.5}, {'word': 'located', 'duration': 10.5}, {'word': 'in', 'duration': 0.84}, {'word': 'north', 'duration': 1.84}, {'word': 'america', 'duration': 2.96}, {'word': 'federal', 'duration': 1.84}, {'word': 'union', 'duration': 7.5}, {'word': '50', 'duration': 145.72}, {'word': 'state', 'duration': 7.5}, {'word': 'and', 'duration': 1.52}, {'word': 'federal', 'duration': 1.84}, {'word': 'capital', 'duration': 10.5}, {'word': 'district', 'duration': 12.0}, {'word': 'washington', 'duration': 2.72}, {'word': 'dc', 'duration': 3.0}]
+sentence : state border canada to north and mexico to south with state alaska to northwest and archipelagic hawaii in pacific ocean
+Grouped video IDs: [['/S', '/T', '/A', '/T', '/E'], ['/B', '/O', '/R', '/D', '/E', '/R'], ['08840'], ['58629'], ['38654'], ['02517'], ['35885'], ['58629'], ['53453'], ['63574'], ['/S', '/T', '/A', '/T', '/E'], ['/A', '/L', '/A', '/S', '/K', '/A'], ['58629'], ['38700'], ['02517'], ['/A', '/R', '/C', '/H', '/I', '/P', '/E', '/L', '/A', '/G', '/I', '/C'], ['26797'], ['29171'], ['/P', '/A', '/C', '/I', '/F', '/I', '/C'], ['39343']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[7.125, 8.549999999999999, 2.2039999999999997, 1.3299999999999998, 1.748, 1.444, 2.698, 1.3299999999999998, 1.444, 2.2039999999999997, 7.125, 8.549999999999999, 1.3299999999999998, 1.8619999999999999, 1.444, 17.099999999999998, 1.748, 0.7979999999999999, 9.975, 2.28]
+Word-Duration pairs written to JSON:[{'word': 'state', 'duration': 7.125}, {'word': 'border', 'duration': 8.549999999999999}, {'word': 'canada', 'duration': 2.2039999999999997}, {'word': 'to', 'duration': 1.3299999999999998}, {'word': 'north', 'duration': 1.748}, {'word': 'and', 'duration': 1.444}, {'word': 'mexico', 'duration': 2.698}, {'word': 'to', 'duration': 1.3299999999999998}, {'word': 'south', 'duration': 1.444}, {'word': 'with', 'duration': 2.2039999999999997}, {'word': 'state', 'duration': 7.125}, {'word': 'alaska', 'duration': 8.549999999999999}, {'word': 'to', 'duration': 1.3299999999999998}, {'word': 'northwest', 'duration': 1.8619999999999999}, {'word': 'and', 'duration': 1.444}, {'word': 'archipelagic', 'duration': 17.099999999999998}, {'word': 'hawaii', 'duration': 1.748}, {'word': 'in', 'duration': 0.7979999999999999}, {'word': 'pacific', 'duration': 9.975}, {'word': 'ocean', 'duration': 2.28}]
+sentence : state border canada to north and mexico to south with state alaska to north west and archipelagic hawaiiin pacific ocean
+Grouped video IDs: [['/S', '/T', '/A', '/T', '/E'], ['/B', '/O', '/R', '/D', '/E', '/R'], ['08840'], ['58629'], ['38654'], ['02517'], ['35885'], ['58629'], ['53453'], ['63574'], ['/S', '/T', '/A', '/T', '/E'], ['/A', '/L', '/A', '/S', '/K', '/A'], ['58629'], ['38654'], ['62901'], ['02517'], ['/A', '/R', '/C', '/H', '/I', '/P', '/E', '/L', '/A', '/G', '/I', '/C'], ['/H', '/A', '/W', '/A', '/I', '/I', '/I', '/N'], ['/P', '/A', '/C', '/I', '/F', '/I', '/C'], ['39343']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[7.5, 9.0, 2.32, 1.4, 1.84, 1.52, 2.84, 1.4, 1.52, 2.32, 7.5, 9.0, 1.4, 1.84, 1.4, 1.52, 18.0, 12.0, 10.5, 2.4]
+Word-Duration pairs written to JSON:[{'word': 'state', 'duration': 7.5}, {'word': 'border', 'duration': 9.0}, {'word': 'canada', 'duration': 2.32}, {'word': 'to', 'duration': 1.4}, {'word': 'north', 'duration': 1.84}, {'word': 'and', 'duration': 1.52}, {'word': 'mexico', 'duration': 2.84}, {'word': 'to', 'duration': 1.4}, {'word': 'south', 'duration': 1.52}, {'word': 'with', 'duration': 2.32}, {'word': 'state', 'duration': 7.5}, {'word': 'alaska', 'duration': 9.0}, {'word': 'to', 'duration': 1.4}, {'word': 'north', 'duration': 1.84}, {'word': 'west', 'duration': 1.4}, {'word': 'and', 'duration': 1.52}, {'word': 'archipelagic', 'duration': 18.0}, {'word': 'hawaiiin', 'duration': 12.0}, {'word': 'pacific', 'duration': 10.5}, {'word': 'ocean', 'duration': 2.4}]
+sentence : life journey myriad experience label relationship aspiration and resilience cover both joy and sorrow challenge and triumph navigating complexity ask balance introspection growth and empathy in this exploration we reveal beauty and secret inherent in man experience
+Grouped video IDs: [['/L', '/I', '/F', '/E'], ['31216'], ['/M', '/Y', '/R', '/I', '/A', '/D'], ['20374'], ['31975'], ['47037'], ['/A', '/S', '/P', '/I', '/R', '/A', '/T', '/I', '/O', '/N'], ['02517'], ['/R', '/E', '/S', '/I', '/L', '/I', '/E', '/N', '/C', '/E'], ['13654'], ['07258'], ['31232'], ['02517'], ['/S', '/O', '/R', '/R', '/O', '/W'], ['09891'], ['02517'], ['/T', '/R', '/I', '/U', '/M', '/P', '/H'], ['/N', '/A', '/V', '/I', '/G', '/A', '/T', '/I', '/N', '/G'], ['/C', '/O', '/M', '/P', '/L', '/E', '/X', '/I', '/T', '/Y'], ['03587'], ['04790'], ['/I', '/N', '/T', '/R', '/O', '/S', '/P', '/E', '/C', '/T', '/I', '/O', '/N'], ['/G', '/R', '/O', '/W', '/T', '/H'], ['02517'], ['/E', '/M', '/P', '/A', '/T', '/H', '/Y'], ['29171'], ['58070'], ['/E', '/X', '/P', '/L', '/O', '/R', '/A', '/T', '/I', '/O', '/N'], ['62583'], ['47837'], ['/B', '/E', '/A', '/U', '/T', '/Y'], ['02517'], ['50035'], ['/I', '/N', '/H', '/E', '/R', '/E', '/N', '/T'], ['29171'], ['34685'], ['20374']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[6.0, 1.64, 9.0, 1.52, 1.96, 1.84, 15.0, 1.52, 15.0, 1.72, 1.08, 2.84, 1.52, 9.0, 1.52, 1.52, 10.5, 15.0, 15.0, 1.4, 2.16, 19.5, 9.0, 1.52, 10.5, 0.84, 1.32, 16.5, 1.64, 1.64, 9.0, 1.52, 2.08, 12.0, 0.84, 1.52, 1.52]
+Word-Duration pairs written to JSON:[{'word': 'life', 'duration': 6.0}, {'word': 'journey', 'duration': 1.64}, {'word': 'myriad', 'duration': 9.0}, {'word': 'experience', 'duration': 1.52}, {'word': 'label', 'duration': 1.96}, {'word': 'relationship', 'duration': 1.84}, {'word': 'aspiration', 'duration': 15.0}, {'word': 'and', 'duration': 1.52}, {'word': 'resilience', 'duration': 15.0}, {'word': 'cover', 'duration': 1.72}, {'word': 'both', 'duration': 1.08}, {'word': 'joy', 'duration': 2.84}, {'word': 'and', 'duration': 1.52}, {'word': 'sorrow', 'duration': 9.0}, {'word': 'challenge', 'duration': 1.52}, {'word': 'and', 'duration': 1.52}, {'word': 'triumph', 'duration': 10.5}, {'word': 'navigating', 'duration': 15.0}, {'word': 'complexity', 'duration': 15.0}, {'word': 'ask', 'duration': 1.4}, {'word': 'balance', 'duration': 2.16}, {'word': 'introspection', 'duration': 19.5}, {'word': 'growth', 'duration': 9.0}, {'word': 'and', 'duration': 1.52}, {'word': 'empathy', 'duration': 10.5}, {'word': 'in', 'duration': 0.84}, {'word': 'this', 'duration': 1.32}, {'word': 'exploration', 'duration': 16.5}, {'word': 'we', 'duration': 1.64}, {'word': 'reveal', 'duration': 1.64}, {'word': 'beauty', 'duration': 9.0}, {'word': 'and', 'duration': 1.52}, {'word': 'secret', 'duration': 2.08}, {'word': 'inherent', 'duration': 12.0}, {'word': 'in', 'duration': 0.84}, {'word': 'man', 'duration': 1.52}, {'word': 'experience', 'duration': 1.52}]
+sentence : today good day i meet obama from america and play cricket
+Grouped video IDs: [['58676'], ['25037'], ['14780'], ['28557'], ['35506'], ['/O', '/B', '/A', '/M', '/A'], ['23637'], ['02348'], ['02517'], ['69433'], ['/C', '/R', '/I', '/C', '/K', '/E', '/T']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.84, 1.52, 2.08, 0.84, 1.08, 7.5, 1.52, 2.96, 1.52, 2.52, 10.5]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.84}, {'word': 'good', 'duration': 1.52}, {'word': 'day', 'duration': 2.08}, {'word': 'i', 'duration': 0.84}, {'word': 'meet', 'duration': 1.08}, {'word': 'obama', 'duration': 7.5}, {'word': 'from', 'duration': 1.52}, {'word': 'america', 'duration': 2.96}, {'word': 'and', 'duration': 1.52}, {'word': 'play', 'duration': 2.52}, {'word': 'cricket', 'duration': 10.5}]
+sentence : today good day i meet barack obama america president and play football
+Grouped video IDs: [['58676'], ['25037'], ['14780'], ['28557'], ['35506'], ['/B', '/A', '/R', '/A', '/C', '/K'], ['/O', '/B', '/A', '/M', '/A'], ['02348'], ['44364'], ['02517'], ['69433'], ['22798']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.84, 1.52, 2.08, 0.84, 1.08, 9.0, 7.5, 2.96, 2.64, 1.52, 2.52, 1.4]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.84}, {'word': 'good', 'duration': 1.52}, {'word': 'day', 'duration': 2.08}, {'word': 'i', 'duration': 0.84}, {'word': 'meet', 'duration': 1.08}, {'word': 'barack', 'duration': 9.0}, {'word': 'obama', 'duration': 7.5}, {'word': 'america', 'duration': 2.96}, {'word': 'president', 'duration': 2.64}, {'word': 'and', 'duration': 1.52}, {'word': 'play', 'duration': 2.52}, {'word': 'football', 'duration': 1.4}]
+sentence : i girl and i love everyone
+Grouped video IDs: [['28557'], ['24590'], ['02517'], ['28557'], ['34118'], ['/E', '/V', '/E', '/R', '/Y', '/O', '/N', '/E']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[0.84, 1.96, 1.52, 0.84, 1.4, 12.0]
+Word-Duration pairs written to JSON:[{'word': 'i', 'duration': 0.84}, {'word': 'girl', 'duration': 1.96}, {'word': 'and', 'duration': 1.52}, {'word': 'i', 'duration': 0.84}, {'word': 'love', 'duration': 1.4}, {'word': 'everyone', 'duration': 12.0}]

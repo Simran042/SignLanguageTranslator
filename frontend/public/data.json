@@ -1,21 +1,13 @@
 {
-    "sentence": "today today obama america we america",
+    "sentence": "i girl and i love everyone",
     "duration": [
-        1.647,
-        1.647,
-        6.75,
-        2.6550000000000002,
-        1.4669999999999999,
-        2.6550000000000002
+        0.84,
+        1.96,
+        1.52,
+        0.84,
+        1.4,
+        12.0
     ],
-    "ner": [
-        "obama america",
-        "america",
-        "today"
-    ],
-    "description": [
-        "Barack Hussein Obama II (born August 4, 1961) is an American lawyer and politician who served as the 44th president of the United States from 2009 to 2017. A member of the Democratic Party, he was the first African-American president in U.S. history.",
-        "The United States of America (USA), commonly known as the United States (U.S.) or America, is a country primarily located in North America. It is a federal union of 50 states and a federal capital district, Washington, D.C. The 48 contiguous states border Canada to the north and Mexico to the south, with the states of Alaska to the northwest and the archipelagic Hawaii in the Pacific Ocean.",
-        "A day is the time period of a full rotation of the Earth with respect to the Sun.  On average, this is 24 hours (86,400 seconds)."
-    ]
+    "ner": [],
+    "description": []
 }

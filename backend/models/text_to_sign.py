@@ -144,12 +144,12 @@ def concatenate_videos(video_ids, video_dir, output_path):
 
                 cap.release()
                 word_duration += frame_count / fps
-                word_duration-= 0.01
+                # word_duration-= 0.01
                 
 
         # Add word clips to main video
         video_clips.extend(word_clips)
-        clip_durations.append(word_duration*0.9)
+        clip_durations.append(word_duration)
 
     if not video_clips:
         log_text("No video clips to concatenate.")

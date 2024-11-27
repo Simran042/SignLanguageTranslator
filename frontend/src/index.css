@@ -26,3 +26,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes scroll-caption {
+  0% {
+    left: 100%; /* Start off-screen on the right */
+  }
+  100% {
+    left: -100%; /* End off-screen on the left */
+  }
+}
+

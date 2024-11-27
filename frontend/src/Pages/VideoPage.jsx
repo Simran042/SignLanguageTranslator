@@ -12,6 +12,8 @@ const VideoPage = () => {
 
   const [currentWordIndex, setCurrentWordIndex] = useState(null); // Track current highlighted word
   const [selectedDescription, setSelectedDescription] = useState(null); // Description to display on click
+  const [selectedWordIndex, setSelectedWordIndex] = useState(null); // Index of the clicked word
+  const [videoDuration, setVideoDuration] = useState(0); // Store total video duration
 
   // Fetch data from data.json
   useEffect(() => {
@@ -36,6 +38,11 @@ const VideoPage = () => {
     fetchData();
   }, []);
 
+  // Get video duration
+  const handleVideoDuration = (duration) => {
+    setVideoDuration(duration);
+  };
+
   // Handle word highlighting
   const handleWordHighlight = (currentTime) => {
     let accumulatedTime = 0;
@@ -53,15 +60,23 @@ const VideoPage = () => {
   };
 
   // Handle word click to show description
-  const handleWordClick = (word) => {
+  const handleWordClick = (word, index) => {
     const nerIndex = ner.indexOf(word); // Check if the word is in NER
     if (nerIndex !== -1 && descriptions[nerIndex]) {
       setSelectedDescription(descriptions[nerIndex]);
+      setSelectedWordIndex(index); // Track the clicked word index
     }
+  };
+
+  // Close the modal
+  const closeModal = () => {
+    setSelectedDescription(null);
+    setSelectedWordIndex(null);
   };
 
   return (
     <div className="w-screen h-screen bg-gray-900 flex justify-between items-center flex-col">
+      {/* Video Section */}
       <div className="w-screen p-10">
         <button
           onClick={() => navigate("/audio")}
@@ -95,43 +110,88 @@ const VideoPage = () => {
           width="600px"
           height="400px"
           onProgress={({ playedSeconds }) => handleWordHighlight(playedSeconds)}
+          onDuration={handleVideoDuration} // Get video duration
         />
       </div>
 
-      {/* Display the highlighted text */}
-      <div className="text-center">
-        {words.length > 0 ? (
-          <h1 style={{ color: "white", fontSize: "2rem" }}>
-            {words.map((word, index) => (
+      {/* Caption Block */}
+      <div
+        className="w-full flex justify-center items-center relative bg-black bg-opacity-80 text-center text-white p-4 mt-4"
+        style={{
+          fontSize: "1.25rem",
+          overflowX: "auto", // Allow horizontal scroll
+          maxWidth: "100%", // Full width of the screen
+          whiteSpace: "nowrap", // Keep the words in one line
+          scrollbarWidth: "none", // Hide scrollbar for Firefox
+          WebkitOverflowScrolling: "touch", // Smooth scrolling for iOS
+        }}
+      >
+        {/* Dynamic text scroll */}
+        <div
+          className="caption-text"
+          style={{
+            display: "inline-block",
+            position: "relative",
+            left: "0",
+            overflowX: "scroll", // Enable horizontal scroll
+            width: "100%", // Full width of the screen
+            scrollBehavior: "smooth", // Smooth scrolling effect
+            scrollbarWidth: "none", // Hide scrollbar in Firefox
+            WebkitOverflowScrolling: "touch", // For iOS scrolling
+          }}
+          ref={(el) => {
+            if (el && currentWordIndex !== null) {
+              const wordElement = el.children[currentWordIndex];
+              if (wordElement) {
+                el.scrollLeft = wordElement.offsetLeft - el.offsetWidth / 2 + wordElement.offsetWidth / 2;
+              }
+            }
+          }}
+        >
+          {words.length > 0 ? (
+            words.map((word, index) => (
               <span
                 key={index}
                 style={{
-                  color: index === currentWordIndex ? "yellow" : "white", // Highlight current word
+                  color:
+                    index === currentWordIndex
+                      ? "yellow"
+                      : index === selectedWordIndex
+                      ? "red" // Highlight clicked word
+                      : "white",
                   marginRight: "0.5rem",
                   cursor: ner.includes(word) ? "pointer" : "default", // Make clickable if in NER
                   textDecoration: ner.includes(word) ? "underline" : "none", // Add underline for NER words
                 }}
-                onClick={() => handleWordClick(word)} // Show description on click
+                onClick={() => handleWordClick(word, index)} // Show description on click
               >
                 {word}
               </span>
-            ))}
-          </h1>
-        ) : (
-          <p style={{ color: "white" }}>Loading words...</p>
-        )}
+            ))
+          ) : (
+            <p>Loading captions...</p>
+          )}
+        </div>
       </div>
 
-      {/* Display the description for clicked NER word */}
+      {/* Modal for NER Word Description */}
       {selectedDescription && (
-        <div className="bg-white text-black p-4 mt-4 rounded shadow-lg max-w-xl text-center">
-          <p>{selectedDescription}</p>
-          <button
-            onClick={() => setSelectedDescription(null)} // Clear description on close
-            className="mt-2 px-4 py-2 bg-red-500 text-white rounded"
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white text-black p-6 rounded shadow-lg max-w-lg w-full relative"
+            onClick={(e) => e.stopPropagation()} // Prevent modal close on inner click
           >
-            Close
-          </button>
+            <p>{selectedDescription}</p>
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
+            >
+              ✖
+            </button>
+          </div>
         </div>
       )}
     </div>
