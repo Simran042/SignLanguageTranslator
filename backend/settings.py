@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-c@u6g9he45t*0^p07_*e!8l-_h&!587#+==8e3zem@fh_0_$d2
 DEBUG = True
 
 # api/settings.py
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'localhost']
 
 # Application definition
 
@@ -83,7 +83,7 @@ TEMPLATES = [
 app = get_wsgi_application()
 #WSGI_APPLICATION = 'backend.wsgi.application'
 # api/settings.py
-WSGI_APPLICATION = 'api.wsgi.app'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases

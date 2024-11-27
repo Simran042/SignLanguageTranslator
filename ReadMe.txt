@@ -87,3 +87,9 @@ To run backend,
 2. pip install -r requirements.txt
 3. cd..
 4. python manage.py runserver
+
+
+
+Sample texts:
+1. Life journey myriad experience label relationship aspiration and resilience cover both joy and sorrow challenge and triumph navigating complexity ask balance introspection growth and empathy in this exploration we reveal beauty and secret inherent in man experience
+2. Today is a good day, I met Barack Obama America president and played football
