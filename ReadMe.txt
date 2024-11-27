@@ -86,7 +86,7 @@ To run backend,
 1. cd backend
 2. pip install -r requirements.txt
 3. cd..
-4. python manage.py runserver
+4. python -u  manage.py runserver > output.txt 2> error.txt
 
 
 
