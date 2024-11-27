@@ -43,14 +43,14 @@ const AudioPage = () => {
         body: formData,
       });
       
-      navigate('/video')
+      
       const data = await response.json();
       // console.log("Response parsed:", data);
     
       if (data.message) {
         alert(data.message);
         setLoading(false)
-        navigate('/video')
+        // navigate('/video')
         // setShowModal(true);
         // e.preventDefault()
       } else {
@@ -132,7 +132,7 @@ const AudioPage = () => {
 
     formData.append("audio", audioBlob, "recorded-audio.wav");
 
-    fetch("http://localhost:8000/upload-audio/", {
+    await fetch("http://localhost:8000/upload-audio/", {
       method: "POST",
       body: formData,
     })
@@ -224,7 +224,7 @@ const AudioPage = () => {
               
             }}
           />
-          <button type="button" class=" text-white py-3 px-6 rounded-[3rem] text-sm font-semibold transition transform hover:scale-105 bg-teal-950 hover:bg-green-800 hover:shadow-sm hover:shadow-black" onClick={handleSend}>
+          <button type="button" className=" text-white py-3 px-6 rounded-[3rem] text-sm font-semibold transition transform hover:scale-105 bg-teal-950 hover:bg-green-800 hover:shadow-sm hover:shadow-black" onClick={handleSend}>
         Play Video
         </button>
         </div>
