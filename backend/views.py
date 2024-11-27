@@ -10,6 +10,7 @@ from .models.text_to_sign import convert_text_to_sign
 from asgiref.sync import sync_to_async
 from django.core.files.storage import FileSystemStorage
 from .models.preprocess import reencode_wav 
+import json
 
 async def upload_audio(request):
     print("Received a request...")  # Debugging print to confirm request received
@@ -72,9 +73,35 @@ async def process_audio(request):
 
         try:
             # Construct the path to the script
-            sentence, duration = await convert_text_to_sign(text_input)
-            print("okkkk:     ",sentence,duration)
-            return JsonResponse({'message': 'Processing completed successfully!', 'result': {"sentence":sentence,"duration":duration}})
+            sentence, duration, ner, description = await convert_text_to_sign(text_input)
+
+            data_to_serialize = {
+                'sentence': sentence,
+                'duration':duration,
+                'ner': list(ner), 
+                'description':description
+            }
+
+            try:
+                json_data = json.dumps(data_to_serialize)
+                print(json_data)  # Output the JSON string
+            except TypeError as e:
+                print(f"An error occurred: {e}")
+
+
+            public_folder_path = os.path.join(settings.BASE_DIR, 'frontend/public')
+
+            # Define the output file path
+            output_file_path = os.path.join(public_folder_path, 'data.json')
+
+            # Write the data to the file
+            
+            with open(output_file_path, 'w') as json_file:
+                json.dump(data_to_serialize, json_file, indent=4)
+            # return JsonResponse({'status': 'success', 'message': 'Data saved successfully.'})
+      
+            
+            return JsonResponse({'message': 'Processing completed successfully!', 'result': json_data})
             # script_path = os.path.join(settings.BASE_DIR, 'models', 'text_to_sign.py')
             # print(f"Script path: {script_path}")  # Print the script path
 

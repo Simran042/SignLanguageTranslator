@@ -27,3 +27,16 @@ video_ids : ['38281']
 Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
 Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
 Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+sentence : today we have obama here in america
+Grouped video IDs: [['58676'], ['62583'], ['26757'], ['/O', '/B', '/A', '/M', '/A'], ['27254'], ['29171'], ['02348']]
+Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.647, 1.4669999999999999, 1.251, 6.75, 1.539, 0.747, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.647}, {'word': 'we', 'duration': 1.4669999999999999}, {'word': 'have', 'duration': 1.251}, {'word': 'obama', 'duration': 6.75}, {'word': 'here', 'duration': 1.539}, {'word': 'in', 'duration': 0.747}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : today today obama america we america
+Grouped video IDs: [['58676'], ['58676'], ['/O', '/B', '/A', '/M', '/A'], ['02348'], ['62583'], ['02348']]
+Output video saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\tanis\cs542\stage2\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[1.647, 1.647, 6.75, 2.6550000000000002, 1.4669999999999999, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.647}, {'word': 'today', 'duration': 1.647}, {'word': 'obama', 'duration': 6.75}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'we', 'duration': 1.4669999999999999}, {'word': 'america', 'duration': 2.6550000000000002}]
