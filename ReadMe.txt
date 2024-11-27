@@ -1,5 +1,5 @@
-                                                                            CS542 - Designing Machine Learning Systems
-                                                                                   Project - Gesture Bridge
+                                            CS542 - Designing Machine Learning Systems
+                                              Project - Gesture Bridge
 
 Project Motivation -> 
 The communication gap between hearing individuals and the deaf or hard-of-hearing community presents significant challenges in accessing essential services, education, and everyday social interactions. Traditional sign language interpreters, while helpful, are often unavailable, costly, or impractical, especially in real-time scenarios.
