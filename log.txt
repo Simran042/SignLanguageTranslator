@@ -89,3 +89,10 @@ Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslato
 Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
 [1.84, 1.52, 2.08, 0.84, 1.08, 9.0, 7.5, 2.96, 2.64, 1.52, 2.52, 1.4]
 Word-Duration pairs written to JSON:[{'word': 'today', 'duration': 1.84}, {'word': 'good', 'duration': 1.52}, {'word': 'day', 'duration': 2.08}, {'word': 'i', 'duration': 0.84}, {'word': 'meet', 'duration': 1.08}, {'word': 'barack', 'duration': 9.0}, {'word': 'obama', 'duration': 7.5}, {'word': 'america', 'duration': 2.96}, {'word': 'president', 'duration': 2.64}, {'word': 'and', 'duration': 1.52}, {'word': 'play', 'duration': 2.52}, {'word': 'football', 'duration': 1.4}]
+sentence : i girl and i love everyone
+Grouped video IDs: [['28557'], ['24590'], ['02517'], ['28557'], ['34118'], ['/E', '/V', '/E', '/R', '/Y', '/O', '/N', '/E']]
+Output video saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/concatenated_video.mp4
+Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
+[0.84, 1.96, 1.52, 0.84, 1.4, 12.0]
+Word-Duration pairs written to JSON:[{'word': 'i', 'duration': 0.84}, {'word': 'girl', 'duration': 1.96}, {'word': 'and', 'duration': 1.52}, {'word': 'i', 'duration': 0.84}, {'word': 'love', 'duration': 1.4}, {'word': 'everyone', 'duration': 12.0}]
