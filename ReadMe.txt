@@ -1,4 +1,21 @@
-The GestureBridge system follows a structured pipeline for translating spoken language into sign language. The process begins with the Speech to Text phase, where audio is re-encoded, chunked into smaller segments, and transcribed into text using advanced speech recognition tools.
+                      CS542 - Designing Machine Learning Systems
+                             Project - Gesture Bridge
+
+Project Motivation -> The communication gap between hearing individuals and the deaf or hard-of-hearing community presents significant challenges in accessing essential services, education, and everyday social interactions. Traditional sign language interpreters, while helpful, are often unavailable, costly, or impractical, especially in real-time scenarios.
+This lack of accessibility underscores the need for an innovative solution to foster inclusivity and empower the hearing-impaired community. GestureBridge is driven by the goal of addressing these challenges through the development of a machine learning-based system that can automatically convert spoken language into sign language, enabling seamless and real-time communication.
+
+Project Introduction -> GestureBridge is an innovative project designed to bridge the communication gap between hearing individuals and the deaf or hard-of-hearing community. By leveraging advanced machine learning technologies, GestureBridge translates spoken language into sign language gestures, enabling smooth, real-time interaction and fostering inclusivity.
+The system integrates speech-to-text processing, natural language understanding, and sign language video generation to create a user-friendly, efficient, and accessible communication platform. By converting spoken words into visual gestures, GestureBridge takes an important step toward empowering the hearing-impaired community and promoting seamless communication.
+
+Goals -> The primary objective of the GestureBridge project is to bridge the communication gap between hearing individuals and the deaf or hard-of-hearing community. We aim to develop a machine learning-based system capable of converting spoken language into sign language gestures, facilitating smooth and natural communication.
+Key goals include:->
+1. Developing an accurate translation system that converts spoken language to sign language.
+2. Ensuring high accuracy in speech recognition and its seamless conversion into sign gestures.
+3. Creating an intuitive, user-friendly interface for smooth interaction.
+4. Testing the system in real-world scenarios to ensure practical usability and effectiveness.
+
+
+Design and Working -> The GestureBridge system follows a structured pipeline for translating spoken language into sign language. The process begins with the Speech to Text phase, where audio is re-encoded, chunked into smaller segments, and transcribed into text using advanced speech recognition tools.
 Next, the text undergoes Preprocessing, which includes several steps:
 Tokenization: Breaking the text into individual words.
 Stopword Removal: Eliminating common, unnecessary words.
@@ -13,7 +30,7 @@ WLASL: A large-scale dataset for Word-Level American Sign Language (WACV 20' Bes
 ASL Alphabet : The dataset contains labeled images of static hand gestures representing the 26 letters of the American Sign Language alphabet, designed for gesture recognition tasks.
 
 DataSet Description ->
-WLASL->
+1.WLASL->
 gloss: str, data file is structured/categorised based on sign gloss, or namely, labels.
 bbox: [int], bounding box detected using YOLOv3 of (xmin, ymin, xmax, ymax) convention. Following OpenCV convention, (0, 0) is the up-left corner.
 fps: int, frame rate (=25) used to decode the video as in the paper.
