@@ -894,3 +894,304 @@ Existing video at C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslato
 Video repaired and saved to C:\Users\simra\OneDrive\Documents\GitHub\SignLanguageTranslator\backend\models\../../frontend/public/fixed_video.mp4
 [1.251, 1.9350000000000003, 1.539, 1.647, 1.647, 1.251]
 Word-Duration pairs written to JSON:[{'word': 'stop', 'duration': 1.251}, {'word': 'wait', 'duration': 1.9350000000000003}, {'word': 'for', 'duration': 1.539}, {'word': 'waiter', 'duration': 1.647}, {'word': 'will', 'duration': 1.647}, {'word': 'come', 'duration': 1.251}]
+sentence : good morning good evening hello
+Grouped video IDs: [['25037'], ['36856'], ['25037'], ['19739'], ['27171']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[1.359, 1.539, 1.359, 1.251, 1.4669999999999999]
+Word-Duration pairs written to JSON:[{'word': 'good', 'duration': 1.359}, {'word': 'morning', 'duration': 1.539}, {'word': 'good', 'duration': 1.359}, {'word': 'evening', 'duration': 1.251}, {'word': 'hello', 'duration': 1.4669999999999999}]
+sentence : no file chosen
+Grouped video IDs: [['38482'], ['/F', '/I', '/L', '/E'], ['/C', '/H', '/O', '/S', '/E', '/N']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.4390000000000005, 5.4, 8.1]
+Word-Duration pairs written to JSON:[{'word': 'no', 'duration': 2.4390000000000005}, {'word': 'file', 'duration': 5.4}, {'word': 'chosen', 'duration': 8.1}]
+sentence : protest show picture
+Grouped video IDs: [['/P', '/R', '/O', '/T', '/E', '/S', '/T'], ['66473'], ['42649']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[9.450000000000001, 1.8270000000000002, 2.079]
+Word-Duration pairs written to JSON:[{'word': 'protest', 'duration': 9.450000000000001}, {'word': 'show', 'duration': 1.8270000000000002}, {'word': 'picture', 'duration': 2.079}]
+sentence : record type upload
+Grouped video IDs: [['/R', '/E', '/C', '/O', '/R', '/D'], ['60304'], ['/U', '/P', '/L', '/O', '/A', '/D']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[8.1, 0.9630000000000001, 8.1]
+Word-Duration pairs written to JSON:[{'word': 'record', 'duration': 8.1}, {'word': 'type', 'duration': 0.9630000000000001}, {'word': 'upload', 'duration': 8.1}]
+sentence : type something about text
+Grouped video IDs: [['60304'], ['53228'], ['00412'], ['57584']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[0.9630000000000001, 1.755, 1.755, 1.647]
+Word-Duration pairs written to JSON:[{'word': 'type', 'duration': 0.9630000000000001}, {'word': 'something', 'duration': 1.755}, {'word': 'about', 'duration': 1.755}, {'word': 'text', 'duration': 1.647}]
+sentence : my name sakshi
+Grouped video IDs: [['37464'], ['37575'], ['/S', '/A', '/K', '/S', '/H', '/I']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[1.179, 1.359, 8.1]
+Word-Duration pairs written to JSON:[{'word': 'my', 'duration': 1.179}, {'word': 'name', 'duration': 1.359}, {'word': 'sakshi', 'duration': 8.1}]
+sentence : mirror back
+Grouped video IDs: [['36259'], ['69218']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[1.4669999999999999, 2.7630000000000003]
+Word-Duration pairs written to JSON:[{'word': 'mirror', 'duration': 1.4669999999999999}, {'word': 'back', 'duration': 2.7630000000000003}]
+sentence : check description
+Grouped video IDs: [['65343'], ['/D', '/E', '/S', '/C', '/R', '/I', '/P', '/T', '/I', '/O', '/N']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.7990000000000004, 14.85]
+Word-Duration pairs written to JSON:[{'word': 'check', 'duration': 2.7990000000000004}, {'word': 'description', 'duration': 14.85}]
+sentence : gesture bridge
+Grouped video IDs: [['/G', '/E', '/S', '/T', '/U', '/R', '/E'], ['07747']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[9.450000000000001, 1.4669999999999999]
+Word-Duration pairs written to JSON:[{'word': 'gesture', 'duration': 9.450000000000001}, {'word': 'bridge', 'duration': 1.4669999999999999}]
+sentence : barack obama america president
+Grouped video IDs: [['/B', '/A', '/R', '/A', '/C', '/K'], ['/O', '/B', '/A', '/M', '/A'], ['02348'], ['44364']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[8.1, 6.75, 2.6550000000000002, 2.3670000000000004]
+Word-Duration pairs written to JSON:[{'word': 'barack', 'duration': 8.1}, {'word': 'obama', 'duration': 6.75}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'president', 'duration': 2.3670000000000004}]
+sentence : america president barack obama
+Grouped video IDs: [['02348'], ['44364'], ['/B', '/A', '/R', '/A', '/C', '/K'], ['/O', '/B', '/A', '/M', '/A']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002, 2.3670000000000004, 8.1, 6.75]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}, {'word': 'president', 'duration': 2.3670000000000004}, {'word': 'barack', 'duration': 8.1}, {'word': 'obama', 'duration': 6.75}]
+sentence : bara
+Grouped video IDs: [['/B', '/A', '/R', '/A']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[5.4]
+Word-Duration pairs written to JSON:[{'word': 'bara', 'duration': 5.4}]
+sentence : taj mahal
+Grouped video IDs: [['/T', '/A', '/J'], ['/M', '/A', '/H', '/A', '/L']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[4.05, 6.75]
+Word-Duration pairs written to JSON:[{'word': 'taj', 'duration': 4.05}, {'word': 'mahal', 'duration': 6.75}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india
+Grouped video IDs: [['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}]
+sentence : india
+Grouped video IDs: [['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america india
+Grouped video IDs: [['02348'], ['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002, 3.051]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}, {'word': 'india', 'duration': 3.051}]
+sentence : america india
+Grouped video IDs: [['02348'], ['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002, 3.051]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}, {'word': 'india', 'duration': 3.051}]
+sentence : india america australia
+Grouped video IDs: [['29399'], ['02348'], ['04183']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002, 1.8630000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'australia', 'duration': 1.8630000000000002}]
+sentence : 
+Grouped video IDs: []
+No video clips to concatenate.
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[]
+Word-Duration pairs written to JSON:[]
+sentence : america india
+Grouped video IDs: [['02348'], ['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002, 3.051]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}, {'word': 'india', 'duration': 3.051}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america india
+Grouped video IDs: [['02348'], ['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002, 3.051]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}, {'word': 'india', 'duration': 3.051}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america
+Grouped video IDs: [['29399'], ['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : america
+Grouped video IDs: [['02348']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}]
+sentence : india america india
+Grouped video IDs: [['29399'], ['02348'], ['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[3.051, 2.6550000000000002, 3.051]
+Word-Duration pairs written to JSON:[{'word': 'india', 'duration': 3.051}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'india', 'duration': 3.051}]
+sentence : barack obama america president
+Grouped video IDs: [['/B', '/A', '/R', '/A', '/C', '/K'], ['/O', '/B', '/A', '/M', '/A'], ['02348'], ['44364']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[8.1, 6.75, 2.6550000000000002, 2.3670000000000004]
+Word-Duration pairs written to JSON:[{'word': 'barack', 'duration': 8.1}, {'word': 'obama', 'duration': 6.75}, {'word': 'america', 'duration': 2.6550000000000002}, {'word': 'president', 'duration': 2.3670000000000004}]
+sentence : america india
+Grouped video IDs: [['02348'], ['29399']]
+Output video saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/concatenated_video.mp4
+Existing video at /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4 deleted.
+Video repaired and saved to /Users/sakshibansal/Desktop/SignLanguageTranslator/backend/models/../../frontend/public/fixed_video.mp4
+[2.6550000000000002, 3.051]
+Word-Duration pairs written to JSON:[{'word': 'america', 'duration': 2.6550000000000002}, {'word': 'india', 'duration': 3.051}]

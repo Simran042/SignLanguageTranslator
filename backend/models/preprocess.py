@@ -145,10 +145,25 @@ def preprocess_text(text=""):
     print("Processed Message:", result['processed_message'])
     print("NER Tokens:", result['ner_tokens'])
     named_entities = {entity for entity, label in result['ner_tokens']}
+    description=[]
+    ner_entitie=[]
     for entity in named_entities:
-        print(wikipedia.summary(entity,sentences=2))
-        print("\n")
-    return result['processed_message']
+        try:
+            # Fetch the summary from Wikipedia with 2 sentences
+            summary = wikipedia.summary(entity, sentences=2)
+            ner_entitie.append(entity)  # Append entity only if summary is fetched
+            description.append(summary)
+            print(summary)
+        except wikipedia.DisambiguationError:
+            # Skip the entity if there is ambiguity
+            print(f"Skipped '{entity}' due to ambiguity.")
+            continue
+        except wikipedia.PageError:
+            # Skip if the page is not found
+            print(f"Skipped '{entity}' because the page was not found.")
+            continue
+
+    return result['processed_message'],ner_entitie,description
 
 if __name__ == '__main__':
     text=preprocess_text()
